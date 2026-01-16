@@ -148,18 +148,18 @@ EXTERN_C void NSISWinMainNOCRT()
     // best we can before Windows gets a chance to mess things up by loading from the wrong directory.
     {
       static const char preload[] = 
-        "UXTHEME\0" // Vista: OleInitialize calls NtUserCreateWindowEx and that pulls in UXTheme.dll
-        "USERENV\0" // Vista: SHGetFileInfo ends up in SHELL32.kfapi::GetUserProfileDir and that pulls in UserEnv.dll
-        "SETUPAPI\0" // XP: SHGetFileInfo ends up in CMountPoint::_InitLocalDriveHelper and that pulls in SetupAPI.dll
-        "APPHELP\0" // Vista: SHGetFileInfo ... SHELL32.SHILAliasTranslate ... SHELL32.ApphelpCheckShellObject
-        "PROPSYS\0" // Vista: SHGetFileInfo ... SHELL32.SHILAliasTranslate ... SHLWAPI.#187 ... SHLWAPI.#505/SHPropertyBag_ReadGUID
-        "DWMAPI\0" // Win7 without KB2533623: UXTheme pulls in DWMAPI.dll
-        "CRYPTBASE\0" // Win7 without KB2533623: OleInitialize ... RPCRT4.UuidCreate ... RPCRT4.GenerateRandomNumber
-        "OLEACC\0" // Vista: SHFileOperation ... SHELL32.CProgressDialogUI::_Setup ... SHELL32.GetRoleTextW
-        "CLBCATQ\0" // XP.SP2&SP3: SHAutoComplete ... OLE32!InitializeCatalogIfNecessary ... OLE32!CComCatalog::TryToLoadCLB
-        "NTMARTA\0" // Win7 without KB2533623 (Bug #1204): SHGetFileInfo ... SetEntriesInAcl ... ADVAPI32!AccProvpLoadMartaFunctions
+        "uxtheme\0" // Vista: OleInitialize calls NtUserCreateWindowEx and that pulls in UXTheme.dll
+        "userenv\0" // Vista: SHGetFileInfo ends up in SHELL32.kfapi::GetUserProfileDir and that pulls in UserEnv.dll
+        "setupapi\0" // XP: SHGetFileInfo ends up in CMountPoint::_InitLocalDriveHelper and that pulls in SetupAPI.dll
+        "apphelp\0" // Vista: SHGetFileInfo ... SHELL32.SHILAliasTranslate ... SHELL32.ApphelpCheckShellObject
+        "propsys\0" // Vista: SHGetFileInfo ... SHELL32.SHILAliasTranslate ... SHLWAPI.#187 ... SHLWAPI.#505/SHPropertyBag_ReadGUID
+        "dwmapi\0" // Win7 without KB2533623: UXTheme pulls in DWMAPI.dll
+        "cryptbase\0" // Win7 without KB2533623: OleInitialize ... RPCRT4.UuidCreate ... RPCRT4.GenerateRandomNumber
+        "oleacc\0" // Vista: SHFileOperation ... SHELL32.CProgressDialogUI::_Setup ... SHELL32.GetRoleTextW
+        "clbcatq\0" // XP.SP2&SP3: SHAutoComplete ... OLE32!InitializeCatalogIfNecessary ... OLE32!CComCatalog::TryToLoadCLB
+        "ntmarta\0" // Win7 without KB2533623 (Bug #1204): SHGetFileInfo ... SetEntriesInAcl ... ADVAPI32!AccProvpLoadMartaFunctions
 #ifndef NSIS_SUPPORT_GETDLLVERSION
-        "VERSION\0"
+        "version\0"
 #endif
       ;
       const char *dll;

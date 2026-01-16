@@ -22,7 +22,7 @@
 using namespace std;
 
 #ifndef _WIN32
-struct evnet_t
+struct event_t
 {
   pthread_cond_t cond;
   pthread_mutex_t mutex;
@@ -31,7 +31,7 @@ struct evnet_t
 
 HANDLE CreateEvent(void *, BOOL, BOOL, TCHAR *)
 {
-  evnet_t *event = (evnet_t *) malloc(sizeof(evnet_t));
+  event_t *event = (event_t *) malloc(sizeof(event_t));
   if (!event)
     return 0;
   if (pthread_cond_init(&event->cond, NULL))
@@ -51,7 +51,7 @@ HANDLE CreateEvent(void *, BOOL, BOOL, TCHAR *)
 
 BOOL SetEvent(HANDLE _event)
 {
-  evnet_t *event = (evnet_t *) _event;
+  event_t *event = (event_t *) _event;
   if (pthread_mutex_lock(&event->mutex))
     return FALSE;
   event->signaled = true;
@@ -63,7 +63,7 @@ BOOL SetEvent(HANDLE _event)
 
 BOOL ResetEvent(HANDLE _event)
 {
-  evnet_t *event = (evnet_t *) _event;
+  event_t *event = (event_t *) _event;
   if (pthread_mutex_lock(&event->mutex))
     return FALSE;
   event->signaled = false;
@@ -75,7 +75,7 @@ BOOL ResetEvent(HANDLE _event)
 BOOL CloseHandle(HANDLE _event)
 {
   BOOL ret = TRUE;
-  evnet_t *event = (evnet_t *) _event;
+  event_t *event = (event_t *) _event;
   if (!event)
     return FALSE;
   if (pthread_cond_destroy(&event->cond))
@@ -90,7 +90,7 @@ BOOL CloseHandle(HANDLE _event)
 #define INFINITE 0
 DWORD WaitForSingleObject(HANDLE _event, DWORD) {
   DWORD ret = WAIT_OBJECT_0;
-  evnet_t *event = (evnet_t *) _event;
+  event_t *event = (event_t *) _event;
   if (pthread_mutex_lock(&event->mutex))
     return !WAIT_OBJECT_0;
   if (!event->signaled)
@@ -317,8 +317,8 @@ int CLZMA::Compress(bool flush)
     SetEvent(hIOReadyEvent);
   }
 
-  HANDLE waitList[2] = {hNeedIOEvent, (HANDLE) hCompressionThread};
-  if (WaitForMultipleObjects(2, waitList, FALSE, INFINITE) != WAIT_OBJECT_0)
+  HANDLE waitList[] = {hNeedIOEvent, (HANDLE) hCompressionThread};
+  if (WaitForMultipleObjects(COUNTOF(waitList), waitList, FALSE, INFINITE) != WAIT_OBJECT_0)
   {
     // thread ended or WaitForMultipleObjects failed
     compressor_finished = TRUE;
