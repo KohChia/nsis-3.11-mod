@@ -16,26 +16,6 @@ Nullsoft Install System %s
 Урнаштыру $(^Name)
 # ^UninstallCaption
 Бетерү $(^Name)
-# ^LicenseSubCaption
-: Лицензия килешүе
-# ^ComponentsSubCaption
-: Урнаштыру шартлары
-# ^DirSubCaption
-: Урнаштыру папкасы
-# ^InstallingSubCaption
-: Файлларны күчермәләү
-# ^CompletedSubCaption
-: Гамәл тәмамланды
-# ^UnComponentsSubCaption
-: Бетерү шартлары
-# ^UnDirSubCaption
-: Бетерү папкасы
-# ^ConfirmSubCaption
-: Раслау
-# ^UninstallingSubCaption
-: Файлларны бетерү
-# ^UnCompletedSubCaption
-: Гамәл тәмамланды
 # ^BackBtn
 < &Артка
 # ^NextBtn

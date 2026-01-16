@@ -138,7 +138,6 @@ void page_writer::write(const page *data)
 
   m_sink->write_int(data->flags);
 
-  m_sink->write_int(data->caption);
   m_sink->write_int(data->back);
   m_sink->write_int(data->next);
   m_sink->write_int(data->clicknext);

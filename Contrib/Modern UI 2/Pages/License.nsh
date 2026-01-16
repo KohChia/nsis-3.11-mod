@@ -13,13 +13,13 @@ License page
   !ifndef MUI_LICENSEPAGE_INTERFACE
     !define MUI_LICENSEPAGE_INTERFACE
     Var mui.LicensePage
-    
+
     Var mui.Licensepage.TopText
     Var mui.Licensepage.Text
     Var mui.Licensepage.LicenseText
-    
+
     !insertmacro MUI_DEFAULT MUI_LICENSEPAGE_BGCOLOR "/windows"
-    
+
     ;Apply settings
     LicenseBkColor "${MUI_LICENSEPAGE_BGCOLOR}"
   !endif
@@ -33,7 +33,7 @@ License page
 !macro MUI_PAGEDECLARATION_LICENSE LICENSEDATA
 
   !insertmacro MUI_SET MUI_${MUI_PAGE_UNINSTALLER_PREFIX}LICENSEPAGE ""
-  !insertmacro MUI_LICENSEPAGE_INTERFACE  
+  !insertmacro MUI_LICENSEPAGE_INTERFACE
 
   !insertmacro MUI_DEFAULT MUI_LICENSEPAGE_TEXT_TOP "$(MUI_INNERTEXT_LICENSE_TOP)"
   !insertmacro MUI_DEFAULT MUI_LICENSEPAGE_BUTTON ""
@@ -44,8 +44,6 @@ License page
   PageEx ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}license
 
     PageCallbacks ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.LicensePre_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.LicenseShow_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.LicenseLeave_${MUI_UNIQUEID}
-
-    Caption " "
 
     LicenseData "${LICENSEDATA}"
 
@@ -126,7 +124,7 @@ License page
     GetDlgItem $mui.LicensePage.TopText $mui.LicensePage 1040
     GetDlgItem $mui.LicensePage.Text $mui.LicensePage 1006
     GetDlgItem $mui.LicensePage.LicenseText $mui.LicensePage 1000
-    
+
     ;Top text
     SendMessage $mui.LicensePage.TopText ${WM_SETTEXT} 0 "STR:${MUI_LICENSEPAGE_TEXT_TOP}"
 

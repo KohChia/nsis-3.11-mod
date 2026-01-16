@@ -13,35 +13,35 @@ Components page
   !ifndef MUI_COMPONENTSPAGE_INTERFACE
     !define MUI_COMPONENTSPAGE_INTERFACE
     Var mui.ComponentsPage
-    
+
     Var mui.ComponentsPage.Text
     Var mui.ComponentsPage.InstTypesText
-    Var mui.ComponentsPage.ComponentsText 
+    Var mui.ComponentsPage.ComponentsText
 
     Var mui.ComponentsPage.InstTypes
-    Var mui.ComponentsPage.Components    
-    
+    Var mui.ComponentsPage.Components
+
     Var mui.ComponentsPage.DescriptionTitle
     Var mui.ComponentsPage.DescriptionText.Info
     Var mui.ComponentsPage.DescriptionText
-    
+
     Var mui.ComponentsPage.SpaceRequired
-    
+
     !insertmacro MUI_DEFAULT MUI_COMPONENTSPAGE_CHECKBITMAP "${NSISDIR}\Contrib\Graphics\Checks\modern.bmp"
-    
+
     !insertmacro MUI_DEFAULT MUI_UI_COMPONENTSPAGE_SMALLDESC "${NSISDIR}\Contrib\UIs\modern_smalldesc.exe"
     !insertmacro MUI_DEFAULT MUI_UI_COMPONENTSPAGE_NODESC "${NSISDIR}\Contrib\UIs\modern_nodesc.exe"
-    
+
     ;Apply settings
-    
+
     !ifdef MUI_COMPONENTSPAGE_SMALLDESC
       ChangeUI IDD_SELCOM "${MUI_UI_COMPONENTSPAGE_SMALLDESC}"
     !else ifdef MUI_COMPONENTSPAGE_NODESC
       ChangeUI IDD_SELCOM "${MUI_UI_COMPONENTSPAGE_NODESC}"
     !endif
 
-    CheckBitmap "${MUI_COMPONENTSPAGE_CHECKBITMAP}"    
-       
+    CheckBitmap "${MUI_COMPONENTSPAGE_CHECKBITMAP}"
+
   !endif
 
 !macroend
@@ -60,12 +60,10 @@ Components page
   !insertmacro MUI_DEFAULT MUI_COMPONENTSPAGE_TEXT_INSTTYPE ""
   !insertmacro MUI_DEFAULT MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_TITLE "$(MUI_INNERTEXT_COMPONENTS_DESCRIPTION_TITLE)"
   !insertmacro MUI_DEFAULT MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_INFO "$(MUI_INNERTEXT_COMPONENTS_DESCRIPTION_INFO)"
-  
+
   PageEx ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}components
 
     PageCallbacks ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.ComponentsPre_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.ComponentsShow_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.ComponentsLeave_${MUI_UNIQUEID}
-
-    Caption " "
 
     ComponentText "${MUI_COMPONENTSPAGE_TEXT_TOP}" "${MUI_COMPONENTSPAGE_TEXT_INSTTYPE}" "${MUI_COMPONENTSPAGE_TEXT_COMPLIST}"
 
@@ -117,7 +115,7 @@ Components page
   FunctionEnd
 
   Function "${SHOW}"
-  
+
     ;Get control handles
     FindWindow $mui.ComponentsPage "#32770" "" $HWNDPARENT
     GetDlgItem $mui.ComponentsPage.Text             $mui.ComponentsPage 1006
@@ -127,7 +125,7 @@ Components page
     GetDlgItem $mui.ComponentsPage.Components       $mui.ComponentsPage 1032
     GetDlgItem $mui.ComponentsPage.DescriptionTitle $mui.ComponentsPage 1042
     GetDlgItem $mui.ComponentsPage.DescriptionText  $mui.ComponentsPage 1043
-    GetDlgItem $mui.ComponentsPage.SpaceRequired    $mui.ComponentsPage 1023    
+    GetDlgItem $mui.ComponentsPage.SpaceRequired    $mui.ComponentsPage 1023
 
     ;Default text in description textbox
     SendMessage $mui.ComponentsPage.DescriptionTitle ${WM_SETTEXT} 0 "STR:${MUI_COMPONENTSPAGE_TEXT_DESCRIPTION_TITLE}"

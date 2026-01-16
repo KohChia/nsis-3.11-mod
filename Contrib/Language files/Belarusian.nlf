@@ -16,26 +16,6 @@ Nullsoft Install System %s
 Усталяванне $(^Name)
 # ^UninstallCaption
 Выдаленне $(^Name)
-# ^LicenseSubCaption
-: Ліцэнзійнае пагадненне
-# ^ComponentsSubCaption
-: Параметры ўсталявання
-# ^DirSubCaption
-: Папка ўсталявання
-# ^InstallingSubCaption
-: Капіяванне файлаў
-# ^CompletedSubCaption
-: Працэдура завершена
-# ^UnComponentsSubCaption
-: Параметры выдалення
-# ^UnDirSubCaption
-: Папка выдалення
-# ^ConfirmSubCaption
-: Пацвярджэнне
-# ^UninstallingSubCaption
-: Выдаленне файлаў
-# ^UnCompletedSubCaption
-: Працэдура завершана
 # ^BackBtn
 < &Назад
 # ^NextBtn

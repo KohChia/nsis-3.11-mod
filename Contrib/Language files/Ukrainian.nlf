@@ -9,35 +9,13 @@ NLF v6
 1251
 # RTL - anything else than RTL means LTR
 -
-
 # Translation by Yuri Holubow, Nash-Soft.com, Dmitriy Kononchuk [gri3ly.kiev.ua], Osidach Vitaly and others
-
 # ^Branding
 Система встановлення Nullsoft %s
 # ^SetupCaption
 Встановлення $(^Name)
 # ^UninstallCaption
 Видалення $(^Name)
-# ^LicenseSubCaption
-: Ліцензійна угода
-# ^ComponentsSubCaption
-: Опції встановлення
-# ^DirSubCaption
-: Тека встановлення
-# ^InstallingSubCaption
-: Триває встановлення
-# ^CompletedSubCaption
-: Завершено
-# ^UnComponentsSubCaption
-: Опції видалення
-# ^UnDirSubCaption
-: Тека видалення
-# ^ConfirmSubCaption
-: Підтвердження
-# ^UninstallingSubCaption
-: Триває видалення
-# ^UnCompletedSubCaption
-: Завершено
 # ^BackBtn
 < &Назад
 # ^NextBtn

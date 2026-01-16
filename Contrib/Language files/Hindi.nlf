@@ -16,26 +16,6 @@ Nullsoft Install System %s
 $(^Name) सेटअप
 # ^UninstallCaption
 $(^Name) अनइनस्टॉल करें
-# ^LicenseSubCaption
-: लाइसेंस समझौता
-# ^ComponentsSubCaption
-: इंस्टालेशन के विकल्प
-# ^DirSubCaption
-: इंस्टालेशन फोल्डर
-# ^InstallingSubCaption
-: इनस्टॉल कर रहे हैं
-# ^CompletedSubCaption
-: संपन्न
-# ^UnComponentsSubCaption
-: अनइंस्टालेशन के विकल्प
-# ^UnDirSubCaption
-: अनइंस्टालेशन फोल्डर
-# ^ConfirmSubCaption
-: पुष्टिकरण
-# ^UninstallingSubCaption
-: अनइनस्टॉल कर रहे हैं
-# ^UnCompletedSubCaption
-: सम्पन्न
 # ^BackBtn
 < &पीछे
 # ^NextBtn

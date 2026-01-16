@@ -17,26 +17,6 @@ Nullsoft Install System %s
 Fampidirana ny $(^Name)
 # ^UninstallCaption
 Fanesorana ny $(^Name)
-# ^LicenseSubCaption
-: Fifanekena
-# ^ComponentsSubCaption
-: Safidy
-# ^DirSubCaption
-: Toerana Fampirimana
-# ^InstallingSubCaption
-: Eo Am-panaovana Azy
-# ^CompletedSubCaption
-: Vita
-# ^UnComponentsSubCaption
-: Safidy
-# ^UnDirSubCaption
-: Toerana Fampirimana
-# ^ConfirmSubCaption
-: Hanamafy
-# ^UninstallingSubCaption
-: Eo Am-panaovana Azy
-# ^UnCompletedSubCaption
-: Vita
 # ^BackBtn
 < &Hiverina
 # ^NextBtn

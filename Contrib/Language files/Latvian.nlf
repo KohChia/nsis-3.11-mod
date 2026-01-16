@@ -17,26 +17,6 @@ Nullsoft Install System %s
 '$(^Name)' Uzstādīšana
 # ^UninstallCaption
 '$(^Name)' Atinstalēšana
-# ^LicenseSubCaption
-: Licences līgums
-# ^ComponentsSubCaption
-: Uzstādīšanas opcijas
-# ^DirSubCaption
-: Uzstādīšanas mape
-# ^InstallingSubCaption
-: Notiek uzstādīšana
-# ^CompletedSubCaption
-: Uzstādīšana pabeigta.
-# ^UnComponentsSubCaption
-: Atinstalēšanas opcijas
-# ^UnDirSubCaption
-: Atinstalēšanas mape
-# ^ConfirmSubCaption
-: Apstiprināšana
-# ^UninstallingSubCaption
-: Notiek atinstalēšana
-# ^UnCompletedSubCaption
-: Atinstalēšana pabeigta
 # ^BackBtn
 < &Atpakaļ
 # ^NextBtn

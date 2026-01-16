@@ -16,26 +16,6 @@ Nullsoft Install System %s
 $(^Name) Суулгац
 # ^UninstallCaption
 $(^Name) Суулгасныг устгах
-# ^LicenseSubCaption
-: Лицензийн зөвшөөрөл
-# ^ComponentsSubCaption
-: Суулгах сонголт
-# ^DirSubCaption
-: Суулгах Хавтас
-# ^InstallingSubCaption
-:Суулгаж байна
-# ^CompletedSubCaption
-: Дууслаа
-# ^UnComponentsSubCaption
-: Суулгасныг устгахын Сонголт
-# ^UnDirSubCaption
-: Суулгасныг устгах Хавтас
-# ^ConfirmSubCaption
-: Батламж
-# ^UninstallingSubCaption
-: Суулгасныг устгаж байна
-# ^UnCompletedSubCaption
-: Дууслаа
 # ^BackBtn
 < &Буцах
 # ^NextBtn

@@ -88,7 +88,7 @@ Localization
   !ifdef MUI_LANGDLL_REGISTRY_VARIABLES
 
     ReadRegStr $mui.LangDLL.RegistryLanguage "${MUI_LANGDLL_REGISTRY_ROOT}" "${MUI_LANGDLL_REGISTRY_KEY}" "${MUI_LANGDLL_REGISTRY_VALUENAME}"
-    
+
     ${if} $mui.LangDLL.RegistryLanguage != ""
       ;Set default language to registry language
       StrCpy $LANGUAGE $mui.LangDLL.RegistryLanguage
@@ -105,19 +105,19 @@ Localization
     ${if} $mui.LangDLL.RegistryLanguage == ""
   !endif
   !endif
-  
+
   ;Show language selection dialog
   !ifdef MUI_LANGDLL_ALLLANGUAGES
     LangDLL::LangDialog "${MUI_LANGDLL_WINDOWTITLE}" "${MUI_LANGDLL_INFO}" A ${MUI_LANGDLL_LANGUAGES} ""
   !else
     LangDLL::LangDialog "${MUI_LANGDLL_WINDOWTITLE}" "${MUI_LANGDLL_INFO}" AC ${MUI_LANGDLL_LANGUAGES_CP} ""
   !endif
-  
+
     Pop $LANGUAGE
     ${if} $LANGUAGE == "cancel"
       Abort
     ${endif}
-  
+
   !ifndef MUI_LANGDLL_ALWAYSSHOW
   !ifdef MUI_LANGDLL_REGISTRY_VARIABLES
     ${endif}
@@ -163,7 +163,7 @@ Localization
   !ifdef MUI_LANGDLL_REGISTRY_ROOT & MUI_LANGDLL_REGISTRY_KEY & MUI_LANGDLL_REGISTRY_VALUENAME
 
     ReadRegStr $mui.LangDLL.RegistryLanguage "${MUI_LANGDLL_REGISTRY_ROOT}" "${MUI_LANGDLL_REGISTRY_KEY}" "${MUI_LANGDLL_REGISTRY_VALUENAME}"
-    
+
     ${if} $mui.LangDLL.RegistryLanguage = ""
 
   !endif

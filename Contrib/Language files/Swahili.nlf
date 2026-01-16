@@ -17,26 +17,6 @@ Nullsoft Install System %s
 $(^Name) Usanidi
 # ^UninstallCaption
 $(^Name) Sakinusha
-# ^LicenseSubCaption
-: Mapatano ya Leseni
-# ^ComponentsSubCaption
-: Machaguo ya Kusakinisha
-# ^DirSubCaption
-: Folda ya Kusakinisha
-# ^InstallingSubCaption
-: Inasakinisha
-# ^CompletedSubCaption
-: Imekamilika
-# ^UnComponentsSubCaption
-: Machaguo ya Kusakinusha
-# ^UnDirSubCaption
-: Folda ya Kusakinusha
-# ^ConfirmSubCaption
-: Uthibitisho
-# ^UninstallingSubCaption
-: Inasakinusha
-# ^UnCompletedSubCaption
-: Imekamilika
 # ^BackBtn
 < Inayo&tangulia
 # ^NextBtn

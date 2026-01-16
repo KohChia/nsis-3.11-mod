@@ -17,26 +17,6 @@ Nullsoft Install System %s
 Rhaglen Osod $(^Name)
 # ^UninstallCaption
 Rhaglen Dadosod $(^Name)
-# ^LicenseSubCaption
-: Cytundeb Trwyddedu
-# ^ComponentsSubCaption
-: Dewisiadau Gosod
-# ^DirSubCaption
-: Ffolder Gosod
-# ^InstallingSubCaption
-: Gosod
-# ^CompletedSubCaption
-: Cwblhawyd
-# ^UnComponentsSubCaption
-: Dewisiadau Dadosod
-# ^UnDirSubCaption
-: Ffolder Dadosod
-# ^ConfirmSubCaption
-: Cadarnhad
-# ^UninstallingSubCaption
-: Dadosod
-# ^UnCompletedSubCaption
-: Cwblhawyd
 # ^BackBtn
 < &Nôl
 # ^NextBtn

@@ -17,26 +17,6 @@ Nullsoft Install System %s
 $(^Name) 설치
 # ^UninstallCaption
 $(^Name) 제거
-# ^LicenseSubCaption
-: 사용권 계약 동의
-# ^ComponentsSubCaption
-: 설치 옵션
-# ^DirSubCaption
-: 폴더 지정
-# ^InstallingSubCaption
-: 파일 설치중
-# ^CompletedSubCaption
-: 설치 완료
-# ^UnComponentsSubCaption
-: 제거 옵션
-# ^UnDirSubCaption
-: 제거 폴더
-# ^ConfirmSubCaption
-: 확인 
-# ^UninstallingSubCaption
-: 제거중
-# ^UnCompletedSubCaption
-: 제거 완료
 # ^BackBtn
 < 뒤로
 # ^NextBtn

@@ -17,26 +17,6 @@ Nullsoft Install System %s
 $(^Name) Apa Kutampila
 # ^UninstallCaption
 $(^Name) Ukufuuta
-# ^LicenseSubCaption
-: Ukusuminishanya
-# ^ComponentsSubCaption
-: Ifya Kusalapo
-# ^DirSubCaption
-: Umuli Ifya Kucita pa Kukopolola
-# ^InstallingSubCaption
-: Ilekopolola
-# ^CompletedSubCaption
-: Capwa
-# ^UnComponentsSubCaption
-: Ifya Kusalapo pa Kufuuta
-# ^UnDirSubCaption
-: Umuli Ifya Kucita pa Kufuuta
-# ^ConfirmSubCaption
-: Confirmation
-# ^UninstallingSubCaption
-: Ilefuuta
-# ^UnCompletedSubCaption
-: Capwa
 # ^BackBtn
 < &Ku Numa
 # ^NextBtn

@@ -953,10 +953,8 @@ int CEXEBuild::doCommand(int which_token, LineParser &line)
 #ifdef NSIS_SUPPORT_CODECALLBACKS
         else { // a custom page
           switch (line.getnumtokens() - enable_last_page_cancel) {
-            case 6:
-              PRINTHELP();
             case 5:
-              cur_page->caption = add_string(line.gettoken_str(4));
+              PRINTHELP();
             case 4:
               if (*line.gettoken_str(3))
                 cur_page->leavefunc = ns_func.add(line.gettoken_str(3),0);
@@ -979,8 +977,6 @@ int CEXEBuild::doCommand(int which_token, LineParser &line)
           SCRIPT_MSG(_T(" (show:%") NPRIs _T(")"), line.gettoken_str(3));
         if (cur_page->leavefunc>=0)
           SCRIPT_MSG(_T(" (leave:%") NPRIs _T(")"), line.gettoken_str(4-!k));
-        else if (cur_page->caption && !k)
-          SCRIPT_MSG(_T(" (caption:%") NPRIs _T(")"), line.gettoken_str(3));
 #endif
         SCRIPT_MSG(_T("\n"));
 
@@ -1250,15 +1246,8 @@ int CEXEBuild::doCommand(int which_token, LineParser &line)
     return PS_OK;
     case TOK_CAPTION:
       {
-        if (!cur_page)
-        {
-          if (SetInnerString(NLF_CAPTION,line.gettoken_str(1)) == PS_WARNING)
-            warning_fl(DW_INNERSTRING_MULTISETWASTE, _T("%") NPRIs _T(": specified multiple times, wasting space"),line.gettoken_str(0));
-        }
-        else
-        {
-          cur_page->caption = add_string(line.gettoken_str(1));
-        }
+        if (SetInnerString(NLF_CAPTION,line.gettoken_str(1)) == PS_WARNING)
+          warning_fl(DW_INNERSTRING_MULTISETWASTE, _T("%") NPRIs _T(": specified multiple times, wasting space"),line.gettoken_str(0));
         SCRIPT_MSG(_T("Caption: \"%") NPRIs _T("\"\n"),line.gettoken_str(1));
       }
     return PS_OK;
@@ -2564,14 +2553,6 @@ int CEXEBuild::doCommand(int which_token, LineParser &line)
         SCRIPT_MSG(_T("UninstallText: \"%") NPRIs _T("\" \"%") NPRIs _T("\"\n"),line.gettoken_str(1),line.gettoken_str(2));
       }
     return PS_OK;
-    case TOK_UNINSTSUBCAPTION:
-      {
-        int succ, w=line.gettoken_int(1,&succ);
-        if (!succ || w < 0 || w > 2) PRINTHELP()
-        SetInnerString(NLF_USUBCAPTION_CONFIRM+w,line.gettoken_str(2));
-        SCRIPT_MSG(_T("UninstSubCaption: page:%d, text=%") NPRIs _T("\n"),w,line.gettoken_str(2));
-      }
-    return PS_OK;
     case TOK_WRITEUNINSTALLER:
     {
       if (uninstall_mode)
@@ -2597,7 +2578,6 @@ int CEXEBuild::doCommand(int which_token, LineParser &line)
     case TOK_UNINSTCAPTION:
     case TOK_UNINSTICON:
     case TOK_UNINSTTEXT:
-    case TOK_UNINSTSUBCAPTION:
       ERROR_MSG(_T("Error: %") NPRIs _T(" specified, NSIS_CONFIG_UNINSTALL_SUPPORT not defined.\n"), line.gettoken_str(0));
     return PS_ERROR;
 #endif
@@ -2795,14 +2775,6 @@ int CEXEBuild::doCommand(int which_token, LineParser &line)
         if (!succ) PRINTHELP()
         SCRIPT_MSG(_T("AddSize: %d kb\n"),size_kb);
         section_add_size_kb(size_kb);
-      }
-    return PS_OK;
-    case TOK_SUBCAPTION:
-      {
-        int succ, w=line.gettoken_int(1,&succ);
-        if (!succ || w < 0 || w > 4) PRINTHELP()
-        SetInnerString(NLF_SUBCAPTION_LICENSE+w,line.gettoken_str(2));
-        SCRIPT_MSG(_T("SubCaption: page:%d, text=%") NPRIs _T("\n"),w,line.gettoken_str(2));
       }
     return PS_OK;
     case TOK_FILEERRORTEXT:

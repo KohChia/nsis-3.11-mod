@@ -17,26 +17,6 @@ Nullsoft Install System %s
 $(^Name) Uppsetning
 # ^UninstallCaption
 $(^Name) Fjarlæging
-# ^LicenseSubCaption
-: Notandaleyfissamningur
-# ^ComponentsSubCaption
-: Uppsetningarvalmöguleikar
-# ^DirSubCaption
-: Uppsetningarskráarsafn
-# ^InstallingSubCaption
-: Set upp
-# ^CompletedSubCaption
-: Lokið
-# ^UnComponentsSubCaption
-: Fjarlægingarvalmöguleikar
-# ^UnDirSubCaption
-: Fjarlægingarskráarsafn
-# ^ConfirmSubCaption
-: Staðfesting
-# ^UninstallingSubCaption
-: Fjarlægi
-# ^UnCompletedSubCaption
-: Lokið
 # ^BackBtn
 < &Til baka
 # ^NextBtn

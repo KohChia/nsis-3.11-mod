@@ -20,26 +20,6 @@ Nullsoft Install System %s
 Инсталиране на $(^Name) 
 # ^UninstallCaption
 Изтриване на $(^Name) 
-#^LicenseSubCaption
-: Лицензионно споразумение
-#^ComponentsSubCaption
-: Опции за инсталиране
-# ^DirSubCaption
-: Инсталиране в папка
-#^InstallingSubCaption
-: Инсталиране
-#^CompletedSubCaption
-: Завършване
-# ^UnComponentsSubCaption
-: Опции за изтриване
-# ^UnDirSubCaption
-: Изтриване от папка
-# ^ConfirmSubCaption
-: Потвърждение
-#^UninstallingSubCaption
-: Изтриване
-#^UnCompletedSubCaption
-: Завършване
 # ^BackBtn
 < &Назад
 #^NextBtn

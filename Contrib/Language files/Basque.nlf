@@ -16,26 +16,6 @@ Nullsoft Install System %s
 $(^Name) -ren Instalazioa
 # ^UninstallCaption
 $(^Name) -ren Ezabaketa
-# ^LicenseSubCaption
-: Lizentzia hitzarmen agiria
-# ^ComponentsSubCaption
-: Instalazio aukerak
-# ^DirSubCaption
-: Instalazio karpeta
-# ^InstallingSubCaption
-: Instalatzen
-# ^CompletedSubCaption
-: Instalazioa burututa
-# ^UnComponentsSubCaption
-: Ezabaketa aukerak
-# ^UnDirSubCaption
-: Ezabaketa direktorioa
-# ^ConfirmSubCaption
-: Berretsi ezabaketa
-# ^UninstallingSubCaption
-: Ezabatzen
-# ^UnCompletedSubCaption
-: Ezabaketa burututa
 # ^BackBtn
 < &Atzera
 # ^NextBtn

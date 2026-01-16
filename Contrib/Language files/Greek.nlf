@@ -16,26 +16,6 @@ Nullsoft Install System %s
 Εγκατάσταση του '$(^Name)'
 # ^UninstallCaption
 Απεγκατάσταση του '$(^Name)'
-# ^LicenseSubCaption
-: Συμφωνία Άδειας Χρήσης
-# ^ComponentsSubCaption
-: Επιλογές Εγκατάστασης
-# ^DirSubCaption
-: Φάκελος Εγκατάστασης
-# ^InstallingSubCaption
-: Εγκατάσταση σε εξέλιξη
-# ^CompletedSubCaption
-: Ολοκληρώθηκε
-# ^UnComponentsSubCaption
-: Επιλογές Απεγκατάστασης
-# ^UnDirSubCaption
-: Φάκελος Απεγκατάστασης
-# ^ConfirmSubCaption
-: Επιβεβαίωση
-# ^UninstallingSubCaption
-: Απεγκατάσταση σε εξέλιξη
-# ^UnCompletedSubCaption
-: Ολοκληρώθηκε
 # ^BackBtn
 < &Πίσω
 # ^NextBtn

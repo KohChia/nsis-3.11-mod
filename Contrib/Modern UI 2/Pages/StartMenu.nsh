@@ -35,7 +35,7 @@ Start Menu folder page
 !macro MUI_PAGEDECLARATION_STARTMENU ID VAR
 
   !insertmacro MUI_SET MUI_${MUI_PAGE_UNINSTALLER_PREFIX}STARTMENUPAGE ""
-  !insertmacro MUI_STARTMENUPAGE_INTERFACE  
+  !insertmacro MUI_STARTMENUPAGE_INTERFACE
 
   !insertmacro MUI_DEFAULT MUI_STARTMENUPAGE_DEFAULTFOLDER "$(^Name)"
   !insertmacro MUI_DEFAULT MUI_STARTMENUPAGE_TEXT_TOP "$(MUI_${MUI_PAGE_UNINSTALLER_PREFIX}INNERTEXT_STARTMENU_TOP)"
@@ -57,8 +57,6 @@ Start Menu folder page
   PageEx ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}custom
 
     PageCallbacks ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.StartmenuPre_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.StartmenuLeave_${MUI_UNIQUEID}
-
-    Caption " "
 
   PageExEnd
 
@@ -97,7 +95,7 @@ Start Menu folder page
     !insertmacro MUI_PAGE_FUNCTION_CUSTOM PRE
 
     !ifdef MUI_STARTMENUPAGE_REGISTRY_ROOT & MUI_STARTMENUPAGE_REGISTRY_KEY & MUI_STARTMENUPAGE_REGISTRY_VALUENAME
-      
+
       ;Get Start Menu location from registry
 
       ${if} "${MUI_STARTMENUPAGE_VARIABLE}" == ""
@@ -175,7 +173,7 @@ Start Menu folder page
   !ifdef MUI_STARTMENUPAGE_${ID}_REGISTRY_ROOT & MUI_STARTMENUPAGE_${ID}_REGISTRY_KEY & MUI_STARTMENUPAGE_${ID}_REGISTRY_VALUENAME
 
     ReadRegStr $mui.StartMenuPage.RegistryLocation "${MUI_STARTMENUPAGE_${ID}_REGISTRY_ROOT}" "${MUI_STARTMENUPAGE_${ID}_REGISTRY_KEY}" "${MUI_STARTMENUPAGE_${ID}_REGISTRY_VALUENAME}"
-    
+
     ${if} $mui.StartMenuPage.RegistryLocation != ""
       StrCpy "${VAR}" $mui.StartMenuPage.RegistryLocation
     ${else}
@@ -187,8 +185,8 @@ Start Menu folder page
     StrCpy "${VAR}" "${MUI_STARTMENUPAGE_${ID}_DEFAULTFOLDER}"
 
   !endif
-   
-  !verbose pop   
+
+  !verbose pop
 
 !macroend
 
@@ -203,7 +201,7 @@ Start Menu folder page
   !define MUI_STARTMENUPAGE_CURRENT_ID "${ID}"
 
   StrCpy $mui.StartMenuPage.Temp "${MUI_STARTMENUPAGE_${MUI_STARTMENUPAGE_CURRENT_ID}_VARIABLE}" 1
-  
+
   ;If the folder start with >, the user has chosen not to create a shortcut
   ${if} $mui.StartMenuPage.Temp != ">"
 

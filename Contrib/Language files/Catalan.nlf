@@ -17,26 +17,6 @@ Nullsoft Install System %s
 Instal·lació de l'aplicació $(^Name)
 # ^UninstallCaption
 Desinstal·lació de l'aplicació $(^Name)
-# ^LicenseSubCaption
-: Acord de llicència
-# ^ComponentsSubCaption
-: Opcions d'instal·lació
-# ^DirSubCaption
-: Carpeta d'instal·lació
-# ^InstallingSubCaption
-: S'està instal·lant
-# ^CompletedSubCaption
-: S'ha acabat
-# ^UnComponentsSubCaption
-: Opcions de desinstal·lació
-# ^UnDirSubCaption
-: Carpeta de desinstal·lació
-# ^ConfirmSubCaption
-: Confirmació
-# ^UninstallingSubCaption
-: S'està desinstal·lant
-# ^UnCompletedSubCaption
-: No s'ha acabat
 # ^BackBtn
 < En&rere
 # ^NextBtn

@@ -17,26 +17,6 @@ Nullsoft Install System %s
 Տեղակայել $(^Name)-ը
 # ^UninstallCaption
 Ջնջել $(^Name)-ը
-# ^LicenseSubCaption
-: Արտոնագրային համաձայնություն
-# ^ComponentsSubCaption
-: Տեղակայելու ընտրանքները
-# ^DirSubCaption
-: Տեղակայելու թղթապանակը
-# ^InstallingSubCaption
-: Ֆայլերը պատճենվում են
-# ^CompletedSubCaption
-: Գործողությունը ավարտվեց
-# ^UnComponentsSubCaption
-: Տեղակայելու ընտրությունը
-# ^UnDirSubCaption
-: Ջնջվող թղթապանակը
-# ^ConfirmSubCaption
-: Հաստատեք
-# ^UninstallingSubCaption
-: Ֆայլերը ջնջվում են
-# ^UnCompletedSubCaption
-: Գործողությունը ավարտվեց
 # ^BackBtn
 « &Նախորդը
 # ^NextBtn

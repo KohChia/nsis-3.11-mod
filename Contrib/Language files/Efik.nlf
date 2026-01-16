@@ -17,26 +17,6 @@ Nullsoft Install System %s
 $(^Name) Nte Etịmde
 # ^UninstallCaption
 $(^Name) Sio Fep
-# ^LicenseSubCaption
-: Ediomi Unyịme
-# ^ComponentsSubCaption
-: Mme Usụn̄ Ẹdade Ẹsịn
-# ^DirSubCaption
-: Ntọt Edisịn Odu Mi
-# ^InstallingSubCaption
-: Edisịn
-# ^CompletedSubCaption
-: Esịn Ama
-# ^UnComponentsSubCaption
-: Mme Usụn̄ Edisio Mfep
-# ^UnDirSubCaption
-: Ntọt Edisio Mfep Odu Mi
-# ^ConfirmSubCaption
-: Fiak Se
-# ^UninstallingSubCaption
-: Edisio Mfep
-# ^UnCompletedSubCaption
-: Osio Efep
 # ^BackBtn
 < &Fiak Edem
 # ^NextBtn

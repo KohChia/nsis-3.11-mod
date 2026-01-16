@@ -17,26 +17,6 @@ Nullsoft Install System %s
 A’ stàladh $(^Name)
 # ^UninstallCaption
 A’ dì-stàladh $(^Name)
-# ^LicenseSubCaption
-: Aonta ceadachais
-# ^ComponentsSubCaption
-: Roghainnean an stàlaidh
-# ^DirSubCaption
-: Pasgan an stàlaidh
-# ^InstallingSubCaption
-: ’Ga stàladh
-# ^CompletedSubCaption
-: Deiseil
-# ^UnComponentsSubCaption
-: Roghainnean an dì-stàlaidh
-# ^UnDirSubCaption
-: Pasgan an dì-stàlaidh
-# ^ConfirmSubCaption
-: Dearbhadh
-# ^UninstallingSubCaption
-: ’Ga dhì-stàladh
-# ^UnCompletedSubCaption
-: Deiseil
 # ^BackBtn
 < Air ai&s
 # ^NextBtn

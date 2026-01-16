@@ -17,26 +17,6 @@ Nullsoft Install System %s
 Cài đặt $(^Name)
 # ^UninstallCaption
 Gỡ bỏ $(^Name)
-# ^LicenseSubCaption
-: Thỏa thuận Giấy phép
-# ^ComponentsSubCaption
-: Tùy chọn Cài đặt
-# ^DirSubCaption
-: Thư mục Cài đặt
-# ^InstallingSubCaption
-: Cài đặt
-# ^CompletedSubCaption
-: Hoàn thành
-# ^UnComponentsSubCaption
-: Tùy chọn Gỡ bỏ
-# ^UnDirSubCaption
-: Thư mục Gỡ bỏ
-# ^ConfirmSubCaption
-: Xác nhận
-# ^UninstallingSubCaption
-: Gỡ bỏ
-# ^UnCompletedSubCaption
-: Hoàn thành
 # ^BackBtn
 < &Lùi
 # ^NextBtn

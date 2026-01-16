@@ -12,22 +12,20 @@ InstallFiles page
 
   !ifndef MUI_INSTFILESYPAGE_INTERFACE
     !define MUI_INSTFILESYPAGE_INTERFACE
-    
+
     !insertmacro MUI_DEFAULT MUI_INSTFILESPAGE_COLORS "/windows"
-    !insertmacro MUI_DEFAULT MUI_INSTFILESPAGE_PROGRESSBAR "smooth"    
-    
+    !insertmacro MUI_DEFAULT MUI_INSTFILESPAGE_PROGRESSBAR "smooth"
+
     Var mui.InstFilesPage
-    
+
     Var mui.InstFilesPage.Text
     Var mui.InstFilesPage.ProgressBar
     Var mui.InstFilesPage.ShowLogButton
     Var mui.InstFilesPage.Log
-    
+
     ;Apply settings
     InstallColors ${MUI_INSTFILESPAGE_COLORS}
     InstProgressFlags ${MUI_INSTFILESPAGE_PROGRESSBAR}
-    SubCaption 4 " "
-    UninstallSubCaption 2 " "   
   !endif
 
 !macroend
@@ -40,12 +38,10 @@ InstallFiles page
 
   !insertmacro MUI_SET MUI_${MUI_PAGE_UNINSTALLER_PREFIX}INSTFILESPAGE ""
   !insertmacro MUI_INSTFILESPAGE_INTERFACE
-  
+
   PageEx ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}instfiles
 
     PageCallbacks ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.InstFilesPre_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.InstFilesShow_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.InstFilesLeave_${MUI_UNIQUEID}
-
-    Caption " "
 
   PageExEnd
 
@@ -101,7 +97,7 @@ InstallFiles page
     FindWindow $mui.InstFilesPage "#32770" "" $HWNDPARENT
     GetDlgItem $mui.InstFilesPage.Text $mui.InstFilesPage 1006
     GetDlgItem $mui.InstFilesPage.ProgressBar $mui.InstFilesPage 1004
-    GetDlgItem $mui.InstFilesPage.ShowLogButton $mui.InstFilesPage 1027    
+    GetDlgItem $mui.InstFilesPage.ShowLogButton $mui.InstFilesPage 1027
     GetDlgItem $mui.InstFilesPage.Log $mui.InstFilesPage 1016
 
     !insertmacro MUI_PAGE_FUNCTION_CUSTOM SHOW

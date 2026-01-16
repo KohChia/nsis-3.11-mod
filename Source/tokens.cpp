@@ -1,15 +1,15 @@
 /*
  * tokens.cpp
- * 
+ *
  * This file is a part of NSIS.
- * 
+ *
  * Copyright (C) 1999-2025 Nullsoft and Contributors
- * 
+ *
  * Licensed under the zlib/libpng license (the "License");
  * you may not use this file except in compliance with the License.
- * 
+ *
  * Licence details can be found in the file COPYING.
- * 
+ *
  * This software is provided 'as-is', without any express or implied
  * warranty.
  *
@@ -23,7 +23,7 @@
 #include "build.h"
 #include "tokens.h"
 
-typedef struct 
+typedef struct
 {
   int id;
   const TCHAR *name;
@@ -46,7 +46,7 @@ static tokenType tokenlist[TOK__LAST] =
 {TOK_BRINGTOFRONT,_T("BringToFront"),0,0,_T(""),TP_CODE},
 {TOK_CALL,_T("Call"),1,0,_T("function_name | [:label_name]"),TP_CODE},
 {TOK_CALLINSTDLL,_T("CallInstDLL"),2,1,_T("dll_path_on_target.dll function"),TP_CODE},
-{TOK_CAPTION,_T("Caption"),1,0,_T("installer_caption"),TP_GLOBAL|TP_PAGEEX},
+{TOK_CAPTION,_T("Caption"),1,0,_T("installer_caption"),TP_GLOBAL},
 {TOK_CHANGEUI,_T("ChangeUI"),2,0,_T("(all|dlg_id) ui_file.exe"),TP_GLOBAL},
 {TOK_CLEARERRORS,_T("ClearErrors"),0,0,_T(""),TP_CODE},
 {TOK_COMPTEXT,_T("ComponentText"),0,3,_T("[component_page_description] [component_subtext1] [component_subtext2]"),TP_PG},
@@ -154,7 +154,7 @@ static tokenType tokenlist[TOK__LAST] =
 {TOK_NAME,_T("Name"),1,1,_T("installer_name [installer_name_doubled_ampersands]"),TP_GLOBAL},
 {TOK_OUTFILE,_T("OutFile"),1,0,_T("install_output.exe"),TP_GLOBAL},
 #ifdef NSIS_SUPPORT_CODECALLBACKS
-{TOK_PAGE,_T("Page"),1,4,_T("((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]"),TP_GLOBAL},
+{TOK_PAGE,_T("Page"),1,4,_T("((custom [creator_function] [leave_function]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]"),TP_GLOBAL},
 #else
 {TOK_PAGE,_T("Page"),1,1,_T("license|components|directory|instfiles|uninstConfirm [/ENABLECANCEL]"),TP_GLOBAL},
 #endif
@@ -233,7 +233,6 @@ static tokenType tokenlist[TOK__LAST] =
 {TOK_STRCPY,_T("StrCpy"),2,2,_T("$(user_var: output) str [maxlen] [startoffset]"),TP_CODE},
 {TOK_UNSAFESTRCPY,_T("UnsafeStrCpy"),2,2,_T("$(var: output) str [maxlen] [startoffset]"),TP_CODE},
 {TOK_STRLEN,_T("StrLen"),2,0,_T("$(user_var: length output) str"),TP_CODE},
-{TOK_SUBCAPTION,_T("SubCaption"),2,0,_T("page_number(0-4) new_subcaption"),TP_GLOBAL},
 #ifdef _UNICODE
 {TOK_TARGET,_T("Target"),1,0,_T("cpu-charset"),TP_GLOBAL},
 {TOK_TARGETCPU,_T("CPU"),1,0,_T("x86|amd64"),TP_GLOBAL},
@@ -243,12 +242,11 @@ static tokenType tokenlist[TOK__LAST] =
 {TOK_UNINSTCAPTION,_T("UninstallCaption"),1,0,_T("uninstaller_caption"),TP_GLOBAL},
 {TOK_UNINSTICON,_T("UninstallIcon"),1,0,_T("icon_on_local_system.ico"),TP_GLOBAL},
 #ifdef NSIS_SUPPORT_CODECALLBACKS
-{TOK_UNINSTPAGE,_T("UninstPage"),1,4,_T("((custom [creator_function] [leave_function] [caption]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]"),TP_GLOBAL},
+{TOK_UNINSTPAGE,_T("UninstPage"),1,4,_T("((custom [creator_function] [leave_function]) | ((license|components|directory|instfiles|uninstConfirm) [pre_function] [show_function] [leave_function])) [/ENABLECANCEL]"),TP_GLOBAL},
 #else
 {TOK_UNINSTPAGE,_T("UninstPage"),1,1,_T("license|components|directory|instfiles|uninstConfirm [/ENABLECANCEL]"),TP_GLOBAL},
 #endif
 {TOK_UNINSTTEXT,_T("UninstallText"),1,1,_T("Text_to_go_on_uninstall_page [subtext]"),TP_PG},
-{TOK_UNINSTSUBCAPTION,_T("UninstallSubCaption"),2,0,_T("page_number(0-2) new_subcaption"),TP_GLOBAL},
 {TOK_UNREGDLL,_T("UnRegDLL"),1,0,_T("dll_path_on_target.dll"),TP_CODE},
 {TOK_WINDOWICON,_T("WindowIcon"),1,0,_T("on|off"),TP_GLOBAL},
 {TOK_WRITEINISTR,_T("WriteINIStr"),4,0,_T("ini_file section_name entry_name new_value"),TP_CODE},
@@ -406,7 +404,7 @@ bool CEXEBuild::is_unsafe_pp_token(int tkid)
 int CEXEBuild::get_commandtoken(const TCHAR *s, int *np, int *op, int *pos)
 {
   for (UINT x = 0; x < TOK__LAST; ++x)
-    if (!_tcsicmp(tokenlist[x].name,s)) 
+    if (!_tcsicmp(tokenlist[x].name,s))
     {
       *np=tokenlist[x].num_parms;
       *op=tokenlist[x].opt_parms;

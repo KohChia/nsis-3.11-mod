@@ -19,26 +19,6 @@ Nullsoft Install System %s
 Assistente d’installazione di $(^Name)
 # ^UninstallCaption
 Disinstallazione di $(^Name)
-# ^LicenseSubCaption
-: Cuntrattu di licenza
-# ^ComponentsSubCaption
-: Ozzioni d’installazione
-# ^DirSubCaption
-: Cartulare d’installazione
-# ^InstallingSubCaption
-: Installazione in corsu
-# ^CompletedSubCaption
-: Installazione compia
-# ^UnComponentsSubCaption
-: Ozzioni di disinstallazione
-# ^UnDirSubCaption
-: Cartulare di disinstallazione
-# ^ConfirmSubCaption
-: Cunfirmazione
-# ^UninstallingSubCaption
-: Disinstallazione in corsu
-# ^UnCompletedSubCaption
-: Disinstallazione compia
 # ^BackBtn
 < &Precedente
 # ^NextBtn

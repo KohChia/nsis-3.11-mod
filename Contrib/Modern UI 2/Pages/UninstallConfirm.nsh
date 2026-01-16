@@ -13,10 +13,10 @@ Uninstall confirmation page
   !ifndef MUI_UNCONFIRMPAGE_INTERFACE
     !define MUI_UNCONFIRMPAGE_INTERFACE
     Var mui.UnConfirmPage
-    
+
     Var mui.UnConfirmPage.Text
     Var mui.UnConfirmPage.DirectoryText
-    Var mui.UnConfirmPage.Directory    
+    Var mui.UnConfirmPage.Directory
   !endif
 
 !macroend
@@ -28,7 +28,7 @@ Uninstall confirmation page
 !macro MUI_PAGEDECLARATION_CONFIRM
 
   !insertmacro MUI_SET MUI_UNCONFIRMPAGE ""
-  !insertmacro MUI_UNCONFIRMPAGE_INTERFACE  
+  !insertmacro MUI_UNCONFIRMPAGE_INTERFACE
 
   !insertmacro MUI_DEFAULT MUI_UNCONFIRMPAGE_TEXT_TOP ""
   !insertmacro MUI_DEFAULT MUI_UNCONFIRMPAGE_TEXT_LOCATION ""
@@ -36,8 +36,6 @@ Uninstall confirmation page
   PageEx un.uninstConfirm
 
     PageCallbacks un.mui.ConfirmPre_${MUI_UNIQUEID} un.mui.ConfirmShow_${MUI_UNIQUEID} un.mui.ConfirmLeave_${MUI_UNIQUEID}
-
-    Caption " "
 
     UninstallText "${MUI_UNCONFIRMPAGE_TEXT_TOP}" "${MUI_UNCONFIRMPAGE_TEXT_LOCATION}"
 
@@ -61,7 +59,7 @@ Uninstall confirmation page
 
   !insertmacro MUI_UNPAGE_INIT
   !insertmacro MUI_PAGEDECLARATION_CONFIRM
-  
+
   !verbose pop
 
 !macroend

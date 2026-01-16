@@ -16,26 +16,6 @@ Nullsoft Install System %s
 התקנת $(^Name)
 # ^UninstallCaption
 הסרת $(^Name)
-# ^LicenseSubCaption
-: הסכם רישוי
-# ^ComponentsSubCaption
-: אפשרויות התקנה
-# ^DirSubCaption
-: תיקיית התקנה
-# ^InstallingSubCaption
-: מתקין
-# ^CompletedSubCaption
-: ההתקנה הושלמה
-# ^UnComponentsSubCaption
-: אפשרויות הסרה
-# ^UnDirSubCaption
-: תיקייה להסרה
-# ^ConfirmSubCaption
-: אישור הסרה
-# ^UninstallingSubCaption
-: מסיר
-# ^UnCompletedSubCaption
-: ההסרה הושלמה
 # ^BackBtn
 < ה&קודם
 # ^NextBtn

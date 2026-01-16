@@ -17,26 +17,6 @@ Nullsoft Install System %s
 Ntinye $(^Name) 
 # ^UninstallCaption
 Mwepụ $(^Name) 
-# ^LicenseSubCaption
-: Nkwekọrịta Akwụkwọ Ikike
-# ^ComponentsSubCaption
-: Ụzọ Isi Tinye Ya
-# ^DirSubCaption
-: Ebe E Debere Ụzọ Isi Tinye Ya
-# ^InstallingSubCaption
-: O Tinyewela Ya
-# ^CompletedSubCaption
-: Ọ Gwụla
-# ^UnComponentsSubCaption
-: Ụzọ Isi Wepụ Ya
-# ^UnDirSubCaption
-: Ebe E Debere Ụzọ Isi Wepụ Ya
-# ^ConfirmSubCaption
-: Ì Kwere?
-# ^UninstallingSubCaption
-: O Wepụwala Ya
-# ^UnCompletedSubCaption
-: Ọ Gwụla
 # ^BackBtn
 < &Azụ
 # ^NextBtn

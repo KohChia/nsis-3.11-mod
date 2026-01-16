@@ -17,26 +17,6 @@ Nullsoft Install System %s
 $(^Name) Telepítő
 # ^UninstallCaption
 $(^Name) Eltávolító
-# ^LicenseSubCaption
-: Licencszerződés
-# ^ComponentsSubCaption
-: Telepítési lehetőségek
-# ^DirSubCaption
-: Célmappa
-# ^InstallingSubCaption
-: Fájlok telepítése
-# ^CompletedSubCaption
-: Kész
-# ^UnComponentsSubCaption
-: Eltávolítási lehetőségek
-# ^UnDirSubCaption
-: Eltávolítás mappája
-# ^ConfirmSubCaption
-: Megerősítés
-# ^UninstallingSubCaption
-: Fájlok eltávolítása
-# ^UnCompletedSubCaption
-: Kész
 # ^BackBtn
 < &Vissza
 # ^NextBtn

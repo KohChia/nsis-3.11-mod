@@ -17,26 +17,6 @@ Nullsoft Install System %s
 Rregullimi i $(^Name)
 # ^UninstallCaption
 Çinstalimi i $(^Name)
-# ^LicenseSubCaption
-: Marrëveshje Licence
-# ^ComponentsSubCaption
-: Mundësi Instalimi
-# ^DirSubCaption
-: Dosje Instalimi
-# ^InstallingSubCaption
-: Po instalohet
-# ^CompletedSubCaption
-: U plotësua
-# ^UnComponentsSubCaption
-: Mundësi Çinstalimi
-# ^UnDirSubCaption
-: Dosje Çinstalimi
-# ^ConfirmSubCaption
-: Ripohim
-# ^UninstallingSubCaption
-: Po çinstalohet
-# ^UnCompletedSubCaption
-: U plotësua
 # ^BackBtn
 < &Mbrapsht
 # ^NextBtn

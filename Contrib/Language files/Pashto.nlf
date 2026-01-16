@@ -17,26 +17,6 @@ Nullsoft Install System %s
 امسته $(^Name)
 # ^UninstallCaption
 نالګاو $(^Name)
-# ^LicenseSubCaption
-: منښتليک تړون
-# ^ComponentsSubCaption
-: لګاو غوراوي
-# ^DirSubCaption
-: لګاو پوښۍ
-# ^InstallingSubCaption
-: لګيږي
-# ^CompletedSubCaption
-: بشپړ
-# ^UnComponentsSubCaption
-: نالګاو غوراوي
-# ^UnDirSubCaption
-: نالګاو پوښۍ
-# ^ConfirmSubCaption
-: باورول
-# ^UninstallingSubCaption
-: نالګيږي
-# ^UnCompletedSubCaption
-: بشپړ
 # ^BackBtn
 < &وروسته
 # ^NextBtn

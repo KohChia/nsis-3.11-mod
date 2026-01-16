@@ -17,26 +17,6 @@ Nullsoft Install System %s
 نصب $(^Name) 
 # ^UninstallCaption
 حذف $(^Name) 
-# ^LicenseSubCaption
-: مجوز نصب
-# ^ComponentsSubCaption
-: گزینه‌های نصب
-# ^DirSubCaption
-: پوشه نصب
-# ^InstallingSubCaption
-: در حال نصب
-# ^CompletedSubCaption
-: پایان یافت
-# ^UnComponentsSubCaption
-: گزینه‌های حذف
-# ^UnDirSubCaption
-: پوشه‌ی حذف
-# ^ConfirmSubCaption
-: تأیید
-# ^UninstallingSubCaption
-: در حال حذف
-# ^UnCompletedSubCaption
-: پایان یافت
 # ^BackBtn
 &قبل 
 # ^NextBtn

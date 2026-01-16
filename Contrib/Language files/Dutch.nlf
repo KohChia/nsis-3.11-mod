@@ -17,26 +17,6 @@ Nullsoft Install System %s
 $(^Name)-installatie
 # ^UninstallCaption
 $(^Name)-deïnstallatie
-# ^LicenseSubCaption
-: Licentieovereenkomst
-# ^ComponentsSubCaption
-: Installatieopties
-# ^DirSubCaption
-: Installatiemap
-# ^InstallingSubCaption
-: Bezig met installeren
-# ^CompletedSubCaption
-: Voltooid
-# ^UnComponentsSubCaption
-: Verwijderingsopties
-# ^UnDirSubCaption
-: Te verwijderen map
-# ^ConfirmSubCaption
-: Bevestiging
-# ^UninstallingSubCaption
-: Bezig met verwijderen
-# ^UnCompletedSubCaption
-: Voltooid
 # ^BackBtn
 < V&orige
 # ^NextBtn

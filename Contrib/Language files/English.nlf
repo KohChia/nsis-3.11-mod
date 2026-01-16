@@ -17,26 +17,6 @@ Nullsoft Install System %s
 $(^Name) Setup
 # ^UninstallCaption
 $(^Name) Uninstall
-# ^LicenseSubCaption
-: License Agreement
-# ^ComponentsSubCaption
-: Installation Options
-# ^DirSubCaption
-: Installation Folder
-# ^InstallingSubCaption
-: Installing
-# ^CompletedSubCaption
-: Completed
-# ^UnComponentsSubCaption
-: Uninstallation Options
-# ^UnDirSubCaption
-: Uninstallation Folder
-# ^ConfirmSubCaption
-: Confirmation
-# ^UninstallingSubCaption
-: Uninstalling
-# ^UnCompletedSubCaption
-: Completed
 # ^BackBtn
 < &Back
 # ^NextBtn

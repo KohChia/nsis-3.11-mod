@@ -16,26 +16,6 @@ Nullsoft Install System %s
 Setup $(^Name)
 # ^UninstallCaption
 Uninstall $(^Name)
-# ^LicenseSubCaption
-: Perlesenan
-# ^ComponentsSubCaption
-: Pilihan kemasukan
-# ^DirSubCaption
-: Folder kemasukan
-# ^InstallingSubCaption
-: Memasang
-# ^CompletedSubCaption
-: Selesai
-# ^UnComponentsSubCaption
-: Pilihan membuang
-# ^UnDirSubCaption
-: Folder Uninstal
-# ^ConfirmSubCaption
-: Kepastian
-# ^UninstallingSubCaption
-: Membuang
-# ^UnCompletedSubCaption
-: Tidak Selesai
 # ^BackBtn
 < &Ke Belakang
 # ^NextBtn

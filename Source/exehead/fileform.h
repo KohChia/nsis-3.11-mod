@@ -461,7 +461,6 @@ typedef struct
 
   int flags;
 
-  int caption;
   int back;
   int next;
   int clicknext;

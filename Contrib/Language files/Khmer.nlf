@@ -17,26 +17,6 @@ Nullsoft Install System %s
 ដំឡើងកម្មវិធី $(^Name) 
 # ^UninstallCaption
 លុប​ $(^Name) ចេញ
-#^LicenseSubCaption
-: កិច្ចសន្យា​អាជ្ញាបប័ណ្ណ
-# ^ComponentsSubCaption
-: ជំរើស​នៃ​ការ​ដំឡើង
-# ^DirSubCaption
-: ថត​ដើម្បី​ដំឡើង
-# ^InstallingSubCaption
-: កំពុងដំឡើង​
-# ^CompletedSubCaption
-: ដំឡើង​រួចរាល់​
-# ^UnComponentsSubCaption
-: ជំរើស​នៃការ​លុបកម្មវិធី​ចេញ​
-# ^UnDirSubCaption
-: ថត​ដែល​ត្រូវលុបកម្មវិធី​ចេញ​
-# ^ConfirmSubCaption
-: ការបញ្ជាក់​ទទួលយក​
-# ^UninstallingSubCaption
-: កំពុង​លុប​ចេញ​
-# ^UnCompletedSubCaption
-: លុបចេញ​រួចរាល់​
 # ^BackBtn
 < &ត្រលប់​ក្រោយ​
 # ^NextBtn

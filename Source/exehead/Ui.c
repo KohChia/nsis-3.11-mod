@@ -1,15 +1,15 @@
 /*
  * Ui.c
- * 
+ *
  * This file is a part of NSIS.
- * 
+ *
  * Copyright (C) 1999-2025 Nullsoft, Jeff Doozan and Contributors
- * 
+ *
  * Licensed under the zlib/libpng license (the "License");
  * you may not use this file except in compliance with the License.
- * 
+ *
  * Licence details can be found in the file COPYING.
- * 
+ *
  * This software is provided 'as-is', without any express or implied
  * warranty.
  *
@@ -186,13 +186,11 @@ void NSISCALL build_g_logfile()
 
 int *cur_langtable;
 
-static TCHAR* update_caption()
+static TCHAR* update_caption(HWND hwnd)
 {
   TCHAR *gcap = g_caption;
   GetNSISString(gcap, LANG_CAPTION);
-#ifdef NSIS_SUPPORT_BGBG
-  my_SetWindowText(m_bgwnd, gcap);
-#endif
+  my_SetWindowText(hwnd, gcap);
   return gcap;
 }
 
@@ -228,7 +226,9 @@ lang_again:
   cur_langtable = selected_langtable;
   myitoa(state_language, *(LANGID*)language_table);
 
-  update_caption();
+#ifdef NSIS_SUPPORT_BGBG
+  update_caption(m_bgwnd);
+#endif
 
   // reload section names
   {
@@ -517,6 +517,7 @@ INT_PTR CALLBACK DialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lPara
       g_hwnd=hwndDlg;
       m_hwndOK=GetDlgItem(hwndDlg,IDOK);
       m_hwndCancel=GetDlgItem(hwndDlg,IDCANCEL);
+      update_caption(hwndDlg);
       SetDlgItemTextFromLang(hwndDlg,IDC_VERSTR,LANG_BRANDING);
       SetClassLongPtr(hwndDlg,GCLP_HICON,(LONG_PTR)g_hIcon);
       // use the following line instead of the above, if .rdata needs shirking
@@ -601,10 +602,6 @@ nextPage:
       {
         SetActiveCtl(m_hwndOK);
       }
-
-      mystrcpy(g_tmp,update_caption());
-      GetNSISString(g_tmp+mystrlen(g_tmp),this_page->caption);
-      my_SetWindowText(hwndDlg,g_tmp);
 
 #ifdef NSIS_SUPPORT_CODECALLBACKS
       // custom page or user used abort in prefunc
@@ -1136,7 +1133,7 @@ static INT_PTR CALLBACK DirProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM l
           pw = p;
           *pw = 0;
           --pw;
-          *pw = _T('\\'); 
+          *pw = _T('\\');
         }
       }
     }

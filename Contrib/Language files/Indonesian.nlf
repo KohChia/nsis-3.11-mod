@@ -20,26 +20,6 @@ Nullsoft Install System %s
 Instalasi Program $(^Name)
 # ^UninstallCaption
 Penghapusan Program $(^Name)
-# ^LicenseSubCaption
-: Perihal Lisensi
-# ^ComponentsSubCaption
-: Pilihan Instalasi
-# ^DirSubCaption
-: Lokasi Instalasi
-# ^InstallingSubCaption
-: Proses Instalasi
-# ^CompletedSubCaption
-: Selesai
-# ^UnComponentsSubCaption
-: Pilihan Penghapusan
-# ^UnDirSubCaption
-: Berkas Lokasi yang dihapus
-# ^ConfirmSubCaption
-: Konfirmasi
-# ^UninstallingSubCaption
-: Proses Penghapusan
-# ^UnCompletedSubCaption
-: Selesai
 # ^BackBtn
 < &Mundur
 # ^NextBtn

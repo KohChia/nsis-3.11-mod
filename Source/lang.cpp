@@ -51,16 +51,6 @@ NLFString NLFStrings[NLF_STRINGS] = {
   {_T("^Branding"), _T("Nullsoft Install System %s"), BOTH_STATIC},
   {_T("^SetupCaption"), _T("$(^Name) Setup"), INSTALL_STATIC},
   {_T("^UninstallCaption"), _T("$(^Name) Uninstall"), UNINSTALL_STATIC},
-  {_T("^LicenseSubCaption"), _T(": License Agreement"), NONE_STATIC},
-  {_T("^ComponentsSubCaption"), _T(": Installation Options"), NONE_STATIC},
-  {_T("^DirSubCaption"), _T(": Installation Folder"), NONE_STATIC},
-  {_T("^InstallingSubCaption"), _T(": Installing"), NONE_STATIC},
-  {_T("^CompletedSubCaption"), _T(": Completed"), NONE_STATIC},
-  {_T("^UnComponentsSubCaption"), _T(": Uninstallation Options"), NONE_STATIC},
-  {_T("^UnDirSubCaption"), _T(": Uninstallation Folder"), NONE_STATIC},
-  {_T("^ConfirmSubCaption"), _T(": Confirmation"), NONE_STATIC},
-  {_T("^UninstallingSubCaption"), _T(": Uninstalling"), NONE_STATIC},
-  {_T("^UnCompletedSubCaption"), _T(": Completed"), NONE_STATIC},
   {_T("^BackBtn"), _T("< &Back"), NONE_STATIC},
   {_T("^NextBtn"), _T("&Next >"), NONE_STATIC},
   {_T("^AgreeBtn"), _T("I &Agree"), NONE_STATIC},
@@ -1110,8 +1100,6 @@ l_readerr:
         if (nlf_version >= 4) break;
       case NLF_FILE_ERROR_NOIGNORE:
         if (nlf_version >= 5) break;
-      case NLF_USUBCAPTION_OPTIONS:
-      case NLF_USUBCAPTION_DIR:
       case NLF_CLICK_NEXT:
       case NLF_CLICK_INSTALL:
       case NLF_CLICK_UNINSTALL:

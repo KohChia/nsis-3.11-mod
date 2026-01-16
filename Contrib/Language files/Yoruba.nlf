@@ -17,26 +17,6 @@ Nullsoft Install System %s
 $(^Name) Ètò Ìṣiṣẹ́
 # ^UninstallCaption
 $(^Name) Yọ Ọ́ Kúrò
-# ^LicenseSubCaption
-: Àdéhùn Ìfúnniláṣẹ
-# ^ComponentsSubCaption
-: Ibi Tó O Fẹ́ Kó Fi Sí
-# ^DirSubCaption
-: Ibi Tó Máa Kó Ìsọfúnni Sí
-# ^InstallingSubCaption
-: Ó Ti Ń Fi Sí I
-# ^CompletedSubCaption
-: Ó Ti Parí
-# ^UnComponentsSubCaption
-: Ṣé Kó Yọ Ọ́?
-# ^UnDirSubCaption
-: Ibi Tó O Fẹ́ Kó Fi Èyí Tó Yọ Sí
-# ^ConfirmSubCaption
-: Ṣ̣é Kó Ṣ̣e É?
-# ^UninstallingSubCaption
-: Ó Ti Ń Yọ Ọ̣́
-# ^UnCompletedSubCaption
-: Ó Ti Parí
 # ^BackBtn
 < &Pa Dà
 # ^NextBtn

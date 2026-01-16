@@ -16,26 +16,6 @@ Nullsoft Install System %s
 $(^Name) Instalacija
 # ^UninstallCaption
 $(^Name) Uklanjanje
-# ^LicenseSubCaption
-: Licencno pravo korištenja
-# ^ComponentsSubCaption
-: Opcije instalacije
-# ^DirSubCaption
-: Izbor mape za instalaciju
-# ^InstallingSubCaption
-: Instaliranje
-# ^CompletedSubCaption
-: Završeno
-# ^UnComponentsSubCaption
-: Opcije uklanjanja
-# ^UnDirSubCaption
-: Mapa uklanjanja
-# ^ConfirmSubCaption
-: Potvrda
-# ^UninstallingSubCaption
-: Uklanjanje
-# ^UnCompletedSubCaption
-: Završeno uklanjanje
 # ^BackBtn
 < &Nazad
 # ^NextBtn
@@ -188,4 +168,3 @@ B
  M
 # ^Giga
  G
-

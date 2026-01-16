@@ -28,26 +28,6 @@ Nullsoft Install System %s
 Instalare $(^Name)
 # ^UninstallCaption
 Dezinstalare $(^Name)
-# ^LicenseSubCaption
-: Contract de licenţă
-# ^ComponentsSubCaption
-: Opţiuni instalare
-# ^DirSubCaption
-: Directorul destinaţie
-# ^InstallingSubCaption
-: În curs de instalare
-# ^CompletedSubCaption
-: Instalare terminată
-# ^UnComponentsSubCaption
-: Opţiuni dezinstalare
-# ^UnDirSubCaption
-: Directorul de dezinstalare
-# ^ConfirmSubCaption
-: Confirmă
-# ^UninstallingSubCaption
-: În curs de dezinstalare
-# ^UnCompletedSubCaption
-: Termină
 # ^BackBtn
 < Îna&poi
 # ^NextBtn

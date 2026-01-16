@@ -13,13 +13,13 @@ Directory page
   !ifndef MUI_DIRECTORYPAGE_INTERFACE
     !define MUI_DIRECTORYPAGE_INTERFACE
     Var mui.DirectoryPage
-    
+
     Var mui.DirectoryPage.Text
-    
+
     Var mui.DirectoryPage.DirectoryBox
     Var mui.DirectoryPage.Directory
     Var mui.DirectoryPage.BrowseButton
-    
+
     Var mui.DirectoryPage.SpaceRequired
     Var mui.DirectoryPage.SpaceAvailable
   !endif
@@ -41,8 +41,6 @@ Directory page
   PageEx ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}directory
 
     PageCallbacks ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.DirectoryPre_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.DirectoryShow_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.DirectoryLeave_${MUI_UNIQUEID}
-
-    Caption " "
 
     DirText "${MUI_DIRECTORYPAGE_TEXT_TOP}" "${MUI_DIRECTORYPAGE_TEXT_DESTINATION}"
 
@@ -101,7 +99,7 @@ Directory page
   FunctionEnd
 
   Function "${SHOW}"
-  
+
     ;Get control handles
     FindWindow $mui.DirectoryPage "#32770" "" $HWNDPARENT
     GetDlgItem $mui.DirectoryPage.Text $mui.DirectoryPage 1006
@@ -110,12 +108,12 @@ Directory page
     GetDlgItem $mui.DirectoryPage.BrowseButton $mui.DirectoryPage 1001
     GetDlgItem $mui.DirectoryPage.SpaceRequired $mui.DirectoryPage 1023
     GetDlgItem $mui.DirectoryPage.SpaceAvailable $mui.DirectoryPage 1024
-  
+
     !ifdef MUI_DIRECTORYPAGE_BGCOLOR
       !insertmacro MUI_DEFAULT MUI_DIRECTORYPAGE_TEXTCOLOR ""
       SetCtlColors $mui.DirectoryPage.Directory "${MUI_DIRECTORYPAGE_TEXTCOLOR}" "${MUI_DIRECTORYPAGE_BGCOLOR}"
     !endif
-    
+
     !insertmacro MUI_PAGE_FUNCTION_CUSTOM SHOW
   FunctionEnd
 

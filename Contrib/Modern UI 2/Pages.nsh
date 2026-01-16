@@ -21,7 +21,7 @@ Support code for all pages
   !insertmacro MUI_UNSET MUI_PAGE_UNINSTALLER
   !insertmacro MUI_UNSET MUI_PAGE_UNINSTALLER_PREFIX
   !insertmacro MUI_UNSET MUI_PAGE_UNINSTALLER_FUNCPREFIX
-  
+
   !insertmacro MUI_SET MUI_PAGE_UNINSTALLER_PREFIX ""
   !insertmacro MUI_SET MUI_PAGE_UNINSTALLER_FUNCPREFIX ""
 
@@ -42,11 +42,11 @@ Support code for all pages
 
   ;Define prefixes for uninstaller page
   !insertmacro MUI_SET MUI_UNINSTALLER ""
-  
+
   !insertmacro MUI_SET MUI_PAGE_UNINSTALLER ""
   !insertmacro MUI_SET MUI_PAGE_UNINSTALLER_PREFIX "UN"
   !insertmacro MUI_SET MUI_PAGE_UNINSTALLER_FUNCPREFIX "un."
-  
+
   ;Generate unique ID
   !insertmacro MUI_UNSET MUI_UNIQUEID
   !define MUI_UNIQUEID ${__LINE__}
@@ -121,14 +121,14 @@ Support code for all pages
     !define MUI_${MUI_PAGE_UNINSTALLER_PREFIX}PAGE_FUNCTION_FULLWINDOW
 
     Function ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}muiPageLoadFullWindow
-    
+
       LockWindow on
-      
+
       ;The branding text needs to be hidden because the full windows page
       ;overlaps with it.
       ShowWindow $mui.Branding.Background ${SW_HIDE}
-      ShowWindow $mui.Branding.Text ${SW_HIDE}      
-      
+      ShowWindow $mui.Branding.Text ${SW_HIDE}
+
       ;The texts need to be hidden because otherwise they may show through
       ;the page above when the Alt key is pressed.
       ShowWindow $mui.Header.Text ${SW_HIDE}
@@ -138,31 +138,31 @@ Support code for all pages
       ;Show line below full width of page
       ShowWindow $mui.Line.Standard ${SW_HIDE}
       ShowWindow $mui.Line.FullWindow ${SW_NORMAL}
-      
+
       LockWindow off
-      
+
     FunctionEnd
-    
+
     Function ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}muiPageUnloadFullWindow
-    
+
       ;Set everything back to normal again
-    
+
       LockWindow on
-      
+
       ShowWindow $mui.Branding.Background ${SW_NORMAL}
       ShowWindow $mui.Branding.Text ${SW_NORMAL}
-      
+
       ShowWindow $mui.Header.Text ${SW_NORMAL}
       ShowWindow $mui.Header.SubText ${SW_NORMAL}
       ShowWindow $mui.Header.Image ${SW_NORMAL}
-      
+
       ShowWindow $mui.Line.Standard ${SW_NORMAL}
       ShowWindow $mui.Line.FullWindow ${SW_HIDE}
-      
+
       LockWindow off
-      
-    FunctionEnd    
-    
+
+    FunctionEnd
+
   !endif
 
 !macroend

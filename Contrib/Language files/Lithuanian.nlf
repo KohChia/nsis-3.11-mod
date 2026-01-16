@@ -17,26 +17,6 @@ Nullsoft Install System %s
 $(^Name) Įdiegimas
 # ^UninstallCaption
 $(^Name) Šalinti
-# ^LicenseSubCaption
-: Naudojimo sutartis
-# ^ComponentsSubCaption
-: Įdiegimo nustatymai
-# ^DirSubCaption
-: Įdiegimo katalogas
-# ^InstallingSubCaption
-: Įdiegiama
-# ^CompletedSubCaption
-: Baigta
-# ^UnComponentsSubCaption
-: Ištrinimo nustatymai
-# ^UnDirSubCaption
-: Ištrinimo katalogas
-# ^ConfirmSubCaption
-: Patvirtinimas
-# ^UninstallingSubCaption
-: Panaikinama
-# ^UnCompletedSubCaption
-: Baigta
 # ^BackBtn
 < &Atgal
 # ^NextBtn

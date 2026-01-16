@@ -43,7 +43,7 @@ Var MUI_TEMP2
 
     !insertmacro MUI_FUNCTION_GUIINIT
     !insertmacro MUI_FUNCTION_ABORTWARNING
-  
+
     !ifdef MUI_IOCONVERT_USED
       !insertmacro INSTALLOPTIONS_FUNCTION_WRITE_CONVERT
     !endif
@@ -51,7 +51,7 @@ Var MUI_TEMP2
     !ifdef MUI_UNINSTALLER
       !insertmacro MUI_UNFUNCTION_GUIINIT
       !insertmacro MUI_FUNCTION_UNABORTWARNING
-    
+
       !ifdef MUI_UNIOCONVERT_USED
         !insertmacro INSTALLOPTIONS_UNFUNCTION_WRITE_CONVERT
       !endif
@@ -79,7 +79,7 @@ Var MUI_TEMP2
     !insertmacro MUI_SET "${SYMBOL}_DEFAULTSET"
     !insertmacro MUI_SET "MUI_${MUI_PAGE_UNINSTALLER_PREFIX}IOCONVERT_USED"
   !else
-    !insertmacro MUI_UNSET "${SYMBOL}_DEFAULTSET" 
+    !insertmacro MUI_UNSET "${SYMBOL}_DEFAULTSET"
   !endif
 
 !macroend
@@ -195,9 +195,6 @@ Var MUI_TEMP2
     LicenseBkColor "${MUI_LICENSEPAGE_BGCOLOR}"
     InstallColors ${MUI_INSTFILESPAGE_COLORS}
     InstProgressFlags ${MUI_INSTFILESPAGE_PROGRESSBAR}
-
-    SubCaption 4 " "
-    UninstallSubCaption 2 " "
 
     !insertmacro MUI_DEFAULT MUI_ABORTWARNING_TEXT "$(MUI_TEXT_ABORTWARNING)"
     !insertmacro MUI_DEFAULT MUI_UNABORTWARNING_TEXT "$(MUI_UNTEXT_ABORTWARNING)"
@@ -804,8 +801,6 @@ Var MUI_TEMP2
 
     PageCallbacks ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.LicensePre_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.LicenseShow_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.LicenseLeave_${MUI_UNIQUEID}
 
-    Caption " "
-
     LicenseData "${LICENSEDATA}"
 
     !ifndef MUI_LICENSEPAGE_TEXT_BOTTOM
@@ -867,8 +862,6 @@ Var MUI_TEMP2
 
     PageCallbacks ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.ComponentsPre_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.ComponentsShow_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.ComponentsLeave_${MUI_UNIQUEID}
 
-    Caption " "
-
     ComponentText "${MUI_COMPONENTSPAGE_TEXT_TOP}" "${MUI_COMPONENTSPAGE_TEXT_INSTTYPE}" "${MUI_COMPONENTSPAGE_TEXT_COMPLIST}"
 
   PageExEnd
@@ -900,8 +893,6 @@ Var MUI_TEMP2
   PageEx ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}directory
 
     PageCallbacks ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.DirectoryPre_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.DirectoryShow_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.DirectoryLeave_${MUI_UNIQUEID}
-
-    Caption " "
 
     DirText "${MUI_DIRECTORYPAGE_TEXT_TOP}" "${MUI_DIRECTORYPAGE_TEXT_DESTINATION}"
 
@@ -962,8 +953,6 @@ Var MUI_TEMP2
 
     PageCallbacks ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.StartmenuPre_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.StartmenuLeave_${MUI_UNIQUEID}
 
-    Caption " "
-
   PageExEnd
 
   !insertmacro MUI_FUNCTION_STARTMENUPAGE ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.StartmenuPre_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.StartmenuLeave_${MUI_UNIQUEID}
@@ -994,8 +983,6 @@ Var MUI_TEMP2
   PageEx ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}instfiles
 
     PageCallbacks ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.InstFilesPre_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.InstFilesShow_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.InstFilesLeave_${MUI_UNIQUEID}
-
-    Caption " "
 
   PageExEnd
 
@@ -1050,8 +1037,6 @@ Var MUI_TEMP2
   PageEx ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}custom
 
     PageCallbacks ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.FinishPre_${MUI_UNIQUEID} ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.FinishLeave_${MUI_UNIQUEID}
-
-    Caption " "
 
   PageExEnd
 
@@ -1122,8 +1107,6 @@ Var MUI_TEMP2
   PageEx un.uninstConfirm
 
     PageCallbacks un.mui.ConfirmPre_${MUI_UNIQUEID} un.mui.ConfirmShow_${MUI_UNIQUEID} un.mui.ConfirmLeave_${MUI_UNIQUEID}
-
-    Caption " "
 
     UninstallText "${MUI_UNCONFIRMPAGE_TEXT_TOP}" "${MUI_UNCONFIRMPAGE_TEXT_LOCATION}"
 
@@ -1403,7 +1386,7 @@ Var MUI_TEMP2
       GetDlgItem $MUI_TEMP1 $MUI_TEMP1 1019
       SetCtlColors $MUI_TEMP1 "${MUI_DIRECTORYPAGE_TEXTCOLOR}" "${MUI_DIRECTORYPAGE_BGCOLOR}"
     !endif
-    
+
     !insertmacro MUI_PAGE_FUNCTION_CUSTOM SHOW
   FunctionEnd
 
@@ -2009,7 +1992,7 @@ Var MUI_TEMP2
   !verbose ${MUI_VERBOSE}
 
   !insertmacro INSTALLOPTIONS_DISPLAY_RETURN "${FILE}"
-  
+
   !verbose pop
 
 !macroend
@@ -2147,7 +2130,7 @@ Var MUI_TEMP2
   !define /ifndef MUI_LANGDLL_LANGUAGES_CP ""
   !define /redef MUI_LANGDLL_LANGUAGES_CP \
     `"${LANGFILE_${NLFID}_LANGDLL}" "${LANG_${NLFID}}" "${LANG_${NLFID}_CP}" ${MUI_LANGDLL_LANGUAGES_CP}`
-  
+
   !verbose pop
 
 !macroend
@@ -2178,10 +2161,10 @@ Var MUI_TEMP2
     mui.langdll_show:
 
   !endif
-  
+
   !ifdef NSIS_CONFIG_SILENT_SUPPORT
     IfSilent mui.langdll_done
-  !endif  
+  !endif
 
   !ifdef MUI_LANGDLL_ALLLANGUAGES
     LangDLL::LangDialog "${MUI_LANGDLL_WINDOWTITLE}" "${MUI_LANGDLL_INFO}" A ${MUI_LANGDLL_LANGUAGES} ""

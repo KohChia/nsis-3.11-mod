@@ -18,26 +18,6 @@ Nullsoft Install System %s
 $(^Name) Kurulumu
 # ^UninstallCaption
 $(^Name) Kaldırma
-# ^LicenseSubCaption
-: Lisans Sözleşmesi
-# ^ComponentsSubCaption
-: Kurulum Seçenekleri
-# ^DirSubCaption
-: Kurulum Dizini
-# ^InstallingSubCaption
-: Kuruluyor
-# ^CompletedSubCaption
-: Tamamlandı
-# ^UnComponentsSubCaption
-: Kaldırma Seçenekleri
-# ^UnDirSubCaption
-: Kaldırılacak Dizin
-# ^ConfirmSubCaption
-: Onay
-# ^UninstallingSubCaption
-: Kaldırılıyor
-# ^UnCompletedSubCaption
-: Tamamlandı
 # ^BackBtn
 < &Geri
 # ^NextBtn

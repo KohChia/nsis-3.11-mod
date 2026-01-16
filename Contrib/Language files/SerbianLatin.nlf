@@ -16,26 +16,6 @@ Nullsoft Install System %s
 $(^Name) Instalacija
 # ^UninstallCaption
 $(^Name) Deinstalacija
-# ^LicenseSubCaption
-: Dogovor o pravu korišćenja
-# ^ComponentsSubCaption
-: Opcije instalacije
-# ^DirSubCaption
-: Izbor foldera za instalaciju
-# ^InstallingSubCaption
-: Instalacija
-# ^CompletedSubCaption
-: Završena instalacija
-# ^UnComponentsSubCaption
-: Opcije deinstalacije
-# ^UnDirSubCaption
-: Izbor foldera za deinstalaciju
-# ^ConfirmSubCaption
-: Potvrđivanje
-# ^UninstallingSubCaption
-: Deinstalacija
-# ^UnCompletedSubCaption
-: Završena deinstalacija
 # ^BackBtn
 < Nazad
 # ^NextBtn

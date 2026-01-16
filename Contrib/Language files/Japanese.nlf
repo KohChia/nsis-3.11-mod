@@ -16,26 +16,6 @@ Nullsoft Install System %s
 $(^Name) セットアップ
 # ^UninstallCaption
 $(^Name) アンインストール
-# ^LicenseSubCaption
-:使用許諾契約
-# ^ComponentsSubCaption
-:インストール オプション
-# ^DirSubCaption
-:インストール フォルダ
-# ^InstallingSubCaption
-:インストール
-# ^CompletedSubCaption
-:完了
-# ^UnComponentsSubCaption
-: アンインストール オプション
-# ^UnDirSubCaption
-: アンインストール フォルダ
-# ^ComfirmSubCaption
-:確認
-# ^UninstallingSubCaption
-:アンインストール
-# ^UnCompletedSubCaption
-:完了
 # ^BackBtn
 < 戻る(&B)
 # ^NextBtn

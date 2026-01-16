@@ -17,26 +17,6 @@ Nullsoft Install System %s
 Socrú $(^Name)
 # ^UninstallCaption
 Díshuiteáil $(^Name)
-# ^LicenseSubCaption
-: Comhaontú um Cheadúnas
-# ^ComponentsSubCaption
-: Roghanna Suiteála
-# ^DirSubCaption
-: Fillteán Suiteála
-# ^InstallingSubCaption
-: Suiteáil
-# ^CompletedSubCaption
-: Críochnaithe
-# ^UnComponentsSubCaption
-: Roghanna Díshuiteála
-# ^UnDirSubCaption
-: Fillteán Díshuiteála
-# ^ConfirmSubCaption
-: Deimhniú
-# ^UninstallingSubCaption
-: Díshuiteáil
-# ^UnCompletedSubCaption
-: Críochnaithe
 # ^BackBtn
 < Ar Ai&s
 # ^NextBtn

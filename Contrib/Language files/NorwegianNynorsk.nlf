@@ -16,26 +16,6 @@ Nullsoft Install System %s
 $(^Name) installasjon
 # ^UninstallCaption
 $(^Name) avinstallasjon
-# ^LicenseSubCaption
-: Lisensavtale
-# ^ComponentsSubCaption
-: Installasjonsval
-# ^DirSubCaption
-: Installasjonsmappe
-# ^InstallingSubCaption
-: Installerer
-# ^CompletedSubCaption
-: Ferdig
-# ^UnComponentsSubCaption
-: Avinstallasjonsval
-# ^UnDirSubCaption
-: Avinstallasjonsmappe
-# ^ConfirmSubCaption
-: Stadfest
-# ^UninstallingSubCaption
-: Avinstallerer
-# ^UnCompletedSubCaption
-: Ferdig
 # ^BackBtn
 < &Attende
 # ^NextBtn
@@ -188,4 +168,3 @@ B
  M
 # ^Giga
  G
-

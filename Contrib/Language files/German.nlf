@@ -16,26 +16,6 @@ Nullsoft Install System %s
 Installation von $(^Name)
 # ^UninstallCaption
 Deinstallation von $(^Name)
-# ^LicenseSubCaption
-: Lizenzabkommen
-# ^ComponentsSubCaption
-: Installationsoptionen
-# ^DirSubCaption
-: Zielverzeichnis
-# ^InstallingSubCaption
-: Wird installiert
-# ^CompletedSubCaption
-: Fertig
-# ^UnComponentsSubCaption
-: Deinstallationsoptionen
-# ^UnDirSubCaption
-: Quellverzeichnis
-# ^ConfirmSubCaption
-: Bestätigung
-# ^UninstallingSubCaption
-: Wird entfernt
-# ^UnCompletedSubCaption
-: Fertig
 # ^BackBtn
 < &Zurück
 # ^NextBtn

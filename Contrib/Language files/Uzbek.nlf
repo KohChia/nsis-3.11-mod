@@ -16,26 +16,6 @@ Nullsoft Install System %s
 O'rnatish $(^Name)
 # ^UninstallCaption
 O'chirish $(^Name)
-# ^LicenseSubCaption
-: Lisenzion kelishuv
-# ^ComponentsSubCaption
-: O'rnatish parametrlari 
-# ^DirSubCaption
-: O'rnatish papkasi
-# ^InstallingSubCaption
-: Fayllarni kopiya qilish
-# ^CompletedSubCaption
-: Operatsiya yakunlandi
-# ^UnComponentsSubCaption
-: O'chirish parametrlari
-# ^UnDirSubCaption
-: O'chirsh papkasi
-# ^ConfirmSubCaption
-: Tasdiqlash
-# ^UninstallingSubCaption
-: Fayllarni o'chirish
-# ^UnCompletedSubCaption
-: Operatsiya yakunlandi
 # ^BackBtn
 < &Orqaga
 # ^NextBtn

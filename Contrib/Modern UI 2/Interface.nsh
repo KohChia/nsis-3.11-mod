@@ -98,14 +98,14 @@ Var mui.Button.Back
 
     ;Default texts
     !insertmacro MUI_DEFAULT MUI_ABORTWARNING_TEXT "$(MUI_TEXT_ABORTWARNING)"
-    !insertmacro MUI_DEFAULT MUI_UNABORTWARNING_TEXT "$(MUI_UNTEXT_ABORTWARNING)"  
+    !insertmacro MUI_DEFAULT MUI_UNABORTWARNING_TEXT "$(MUI_UNTEXT_ABORTWARNING)"
 
     ;Apply settings
 
     XPStyle On ;XP style setting in manifest resource
 
     ;Dialog resources
-    ChangeUI all "${MUI_UI}" 
+    ChangeUI all "${MUI_UI}"
     !ifdef MUI_HEADERIMAGE
       !ifndef MUI_HEADERIMAGE_RIGHT
         ChangeUI IDD_INST "${MUI_UI_HEADERIMAGE}"
@@ -133,7 +133,7 @@ Var mui.Button.Back
   !else
     MessageBox MB_YESNO|MB_ICONEXCLAMATION "${MUI_ABORTWARNING_TEXT}" IDYES mui.Quit
   !endif
-  
+
   Abort
   mui.Quit:
 
@@ -294,7 +294,7 @@ Var mui.Button.Back
 
     !ifdef MUI_PAGE_FUNCTION_GUIINIT
       Call "${MUI_PAGE_FUNCTION_GUIINIT}"
-    !endif  
+    !endif
 
     !ifdef MUI_CUSTOMFUNCTION_GUIINIT
       Call "${MUI_CUSTOMFUNCTION_GUIINIT}"
@@ -306,13 +306,13 @@ Var mui.Button.Back
 
 !macro MUI_UNFUNCTION_GUIINIT
 
-  Function un.onGUIInit  
+  Function un.onGUIInit
 
     !insertmacro MUI_GUIINIT_OUTERDIALOG UN
-    
+
     !ifdef MUI_UNPAGE_FUNCTION_GUIINIT
       Call "${MUI_UNPAGE_FUNCTION_GUIINIT}"
-    !endif    
+    !endif
 
     !ifdef MUI_CUSTOMFUNCTION_UNGUIINIT
       Call "${MUI_CUSTOMFUNCTION_UNGUIINIT}"
@@ -325,19 +325,19 @@ Var mui.Button.Back
 !macro MUI_FUNCTION_ABORTWARNING
 
   Function .onUserAbort
-  
+
     !ifdef MUI_PAGE_FUNCTION_ABORTWARNING
       Call ${MUI_PAGE_FUNCTION_ABORTWARNING}
     !endif
-  
+
     !ifdef MUI_ABORTWARNING
       !insertmacro MUI_ABORTWARNING
     !endif
-    
+
     !ifdef MUI_CUSTOMFUNCTION_ABORT
       Call "${MUI_CUSTOMFUNCTION_ABORT}"
     !endif
-    
+
   FunctionEnd
 
 !macroend
@@ -345,19 +345,19 @@ Var mui.Button.Back
 !macro MUI_FUNCTION_UNABORTWARNING
 
   Function un.onUserAbort
-  
+
     !ifdef MUI_UNPAGE_FUNCTION_ABORTWARNING
       Call ${MUI_UNPAGE_FUNCTION_ABORTWARNING}
-    !endif  
-  
+    !endif
+
     !ifdef MUI_UNABORTWARNING
       !insertmacro MUI_UNABORTWARNING
     !endif
-    
+
     !ifdef MUI_CUSTOMFUNCTION_UNABORT
       Call "${MUI_CUSTOMFUNCTION_UNABORT}"
     !endif
-    
+
   FunctionEnd
 
 !macroend

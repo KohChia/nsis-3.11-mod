@@ -13,16 +13,16 @@ Welcome page (implemented using nsDialogs)
   !ifndef MUI_WELCOMEPAGE_INTERFACE
     !define MUI_WELCOMEPAGE_INTERFACE
     Var mui.WelcomePage
-        
+
     Var mui.WelcomePage.Image
     Var mui.WelcomePage.Image.Bitmap
-    
+
     Var mui.WelcomePage.Title
     Var mui.WelcomePage.Title.Font
-    
+
     Var mui.WelcomePage.Text
   !endif
-  
+
   !insertmacro MUI_DEFAULT MUI_${MUI_PAGE_UNINSTALLER_PREFIX}WELCOMEFINISHPAGE_BITMAP "${NSISDIR}\Contrib\Graphics\Wizard\win.bmp"
   !if "${MUI_${MUI_PAGE_UNINSTALLER_PREFIX}WELCOMEFINISHPAGE_BITMAP}" == ""
     !error "Invalid MUI_${MUI_PAGE_UNINSTALLER_PREFIX}WELCOMEFINISHPAGE_BITMAP"
@@ -40,17 +40,17 @@ Welcome page (implemented using nsDialogs)
     !define MUI_${MUI_PAGE_UNINSTALLER_PREFIX}WELCOMEWELCOMEPAGE_GUINIT
 
     Function ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.WelcomePage.GUIInit
-      
+
       InitPluginsDir
       File "/oname=$PLUGINSDIR\modern-wizard.bmp" "${MUI_${MUI_PAGE_UNINSTALLER_PREFIX}WELCOMEFINISHPAGE_BITMAP}"
       !pragma verifyloadimage "${MUI_${MUI_PAGE_UNINSTALLER_PREFIX}WELCOMEFINISHPAGE_BITMAP}"
-    
+
       !ifdef MUI_${MUI_PAGE_UNINSTALLER_PREFIX}PAGE_FUNCTION_GUIINIT
         Call "${MUI_${MUI_PAGE_UNINSTALLER_PREFIX}PAGE_FUNCTION_GUIINIT}"
-      !endif   
-    
+      !endif
+
     FunctionEnd
-  
+
     !insertmacro MUI_SET MUI_${MUI_PAGE_UNINSTALLER_PREFIX}PAGE_FUNCTION_GUIINIT ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}mui.WelcomePage.GUIInit
 
   !endif
@@ -65,12 +65,12 @@ Welcome page (implemented using nsDialogs)
 
   !insertmacro MUI_SET MUI_${MUI_PAGE_UNINSTALLER_PREFIX}WELCOMEPAGE ""
   !insertmacro MUI_WELCOMEPAGE_INTERFACE
-  
+
   !insertmacro MUI_WELCOMEPAGE_GUIINIT
 
   !insertmacro MUI_DEFAULT MUI_WELCOMEPAGE_TITLE "$(MUI_${MUI_PAGE_UNINSTALLER_PREFIX}TEXT_WELCOME_INFO_TITLE)"
   !insertmacro MUI_DEFAULT MUI_WELCOMEPAGE_TEXT "$(MUI_${MUI_PAGE_UNINSTALLER_PREFIX}TEXT_WELCOME_INFO_TEXT)"
-  
+
   !insertmacro MUI_PAGE_FUNCTION_FULLWINDOW
 
   PageEx ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}custom
@@ -118,14 +118,14 @@ Welcome page (implemented using nsDialogs)
 !macro MUI_FUNCTION_WELCOMEPAGE PRE LEAVE
 
   Function "${PRE}"
-  
-    !insertmacro MUI_PAGE_FUNCTION_CUSTOM PRE  
+
+    !insertmacro MUI_PAGE_FUNCTION_CUSTOM PRE
 
     ;Create dialog
     nsDialogs::Create 1044
     Pop $mui.WelcomePage
     nsDialogs::SetRTL $(^RTL)
-    SetCtlColors $mui.WelcomePage "" "${MUI_BGCOLOR}"    
+    SetCtlColors $mui.WelcomePage "" "${MUI_BGCOLOR}"
 
     ;Image control
     ${NSD_CreateBitmap} 0u 0u 109u 193u ""
@@ -134,13 +134,13 @@ Welcome page (implemented using nsDialogs)
 
     ;Positiong of controls
 
-    ;Title    
+    ;Title
     !ifndef MUI_WELCOMEPAGE_TITLE_3LINES
       !define MUI_WELCOMEPAGE_TITLE_HEIGHT 28
     !else
       !define MUI_WELCOMEPAGE_TITLE_HEIGHT 38
     !endif
-    
+
     ;Text
     ;17 = 10 (top margin) + 7 (distance between texts)
     !define /math MUI_WELCOMEPAGE_TEXT_TOP 17 + ${MUI_WELCOMEPAGE_TITLE_HEIGHT}
@@ -148,7 +148,7 @@ Welcome page (implemented using nsDialogs)
     ;Title
     ${NSD_CreateLabel} 120u 10u 195u ${MUI_WELCOMEPAGE_TITLE_HEIGHT}u "${MUI_WELCOMEPAGE_TITLE}"
     Pop $mui.WelcomePage.Title
-    SetCtlColors $mui.WelcomePage.Title "${MUI_TEXTCOLOR}" "${MUI_BGCOLOR}"    
+    SetCtlColors $mui.WelcomePage.Title "${MUI_TEXTCOLOR}" "${MUI_BGCOLOR}"
     CreateFont $mui.WelcomePage.Title.Font "$(^Font)" "12" "700"
     SendMessage $mui.WelcomePage.Title ${WM_SETFONT} $mui.WelcomePage.Title.Font 0
 
@@ -162,14 +162,14 @@ Welcome page (implemented using nsDialogs)
     !insertmacro MUI_PAGE_FUNCTION_CUSTOM SHOW
     nsDialogs::Show
     !insertmacro MUI_PAGE_FUNCTION_CUSTOM DESTROYED
-    Call ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}muiPageUnloadFullWindow    
+    Call ${MUI_PAGE_UNINSTALLER_FUNCPREFIX}muiPageUnloadFullWindow
 
     ;Delete image from memory
     ${NSD_FreeImage} $mui.WelcomePage.Image.Bitmap
 
     !insertmacro MUI_UNSET MUI_WELCOMEPAGE_TITLE_HEIGHT
     !insertmacro MUI_UNSET MUI_WELCOMEPAGE_TEXT_TOP
-    
+
   FunctionEnd
 
   Function "${LEAVE}"

@@ -16,26 +16,6 @@ Nullsoft Install System %s
 $(^Name) Installasie
 # ^UninstallCaption
 $(^Name) Verwydering
-# ^LicenseSubCaption
-: Lisensie-ooreenkoms
-# ^ComponentsSubCaption
-: Installasiekeuses
-# ^DirSubCaption
-: Installasiegids
-# ^InstallingSubCaption
-: Installeer tans
-# ^CompletedSubCaption
-: Voltooid
-# ^UnComponentsSubCaption
-: Verwyderingkeuses
-# ^UnDirSubCaption
-: Verwyderinggids
-# ^ConfirmSubCaption
-: Bevestiging
-# ^UninstallingSubCaption
-: Verwyder tans
-# ^UnCompletedSubCaption
-: Voltooid
 # ^BackBtn
 < V&orige
 # ^NextBtn

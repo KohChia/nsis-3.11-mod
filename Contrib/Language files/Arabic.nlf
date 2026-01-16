@@ -16,26 +16,6 @@ Nullsoft Install System %s
 تنصيب $(^Name)
 # ^UninstallCaption
 إزالة $(^Name)
-# ^LicenseSubCaption
-إتفاقية‏ الترخيص :
-# ^ComponentsSubCaption
-خيارات التنصيب :
-# ^DirSubCaption
-مجلد التنصيب :
-# ^InstallingSubCaption
-تنصيب :
-# ^CompletedSubCaption
-إنتهى :
-# ^UnComponentsSubCaption
-خيارات الإزالة :
-# ^UnDirSubCaption
-مجلد الإزالة :
-# ^ConfirmSubCaption
-تأكيد :
-# ^UninstallingSubCaption
-إزالة :
-# ^UnCompletedSubCaption
-إنتهى :
 # ^BackBtn
 < ال&سابق
 # ^NextBtn

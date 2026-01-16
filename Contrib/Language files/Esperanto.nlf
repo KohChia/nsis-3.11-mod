@@ -17,26 +17,6 @@ Nullsoft Install System %s
 Instalado de $(^Name)
 # ^UninstallCaption
 Malinstalado de $(^Name)
-# ^LicenseSubCaption
-: Permes-Kontrakto
-# ^ComponentsSubCaption
-: Instaladaj Opcioj
-# ^DirSubCaption
-: Instalada Dosierujo
-# ^InstallingSubCaption
-: Oni Instalas Dosierojn
-# ^CompletedSubCaption
-: Kompletite
-# ^UnComponentsSubCaption
-: Malinstaladaj Opcioj
-# ^UnDirSubCaption
-: Malinstalada Dosierujo
-# ^ConfirmSubCaption
-: Konfirmo
-# ^UninstallingSubCaption
-: Oni malinstalas
-# ^UnCompletedSubCaption
-: Kompletite
 # ^BackBtn
 < &Antauxe
 # ^NextBtn

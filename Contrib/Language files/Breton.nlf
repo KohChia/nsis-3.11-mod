@@ -17,26 +17,6 @@ Nullsoft Install System %s
 Staliañ ha kefluniañ $(^Name)
 # ^UninstallCaption
 Distaliañ $(^Name)
-# ^LicenseSubCaption
-: Aotre arverañ
-# ^ComponentsSubCaption
-: Dibaboù staliañ
-# ^DirSubCaption
-: Kavlec'h staliañ
-# ^InstallingSubCaption
-: O staliañ ar restroù
-# ^CompletedSubCaption
-: Echu eo
-# ^UnComponentsSubCaption
-: Dibaboù distaliañ
-# ^UnDirSubCaption
-: Kavlec'h distaliañ
-# ^ConfirmSubCaption
-: Kadarnañ
-# ^UninstallingSubCaption
-: O tistaliañ ar restroù
-# ^UnCompletedSubCaption
-: Echu eo
 # ^BackBtn
 < &Kent
 # ^NextBtn

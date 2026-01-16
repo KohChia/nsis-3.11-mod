@@ -16,26 +16,6 @@ Nullsoft Install System %s
 Inštalácia programu $(^Name)
 # ^UninstallCaption
 Odinštalovanie programu $(^Name)
-# ^LicenseSubCaption
-: Licenčná zmluva
-# ^ComponentsSubCaption
-: Možnosti inštalácie
-# ^DirSubCaption
-: Inštalačný priečinok
-# ^InstallingSubCaption
-: Prebieha inštalácia
-# ^CompletedSubCaption
-: Hotovo
-# ^UnComponentsSubCaption
-: Možnosti odinštalovania
-# ^UnDirSubCaption
-: Priečinok s informáciami pre odinštalovanie
-# ^ConfirmSubCaption
-: Potvrdenie
-# ^UninstallingSubCaption
-: Prebieha odinštalácia
-# ^UnCompletedSubCaption
-: Hotovo
 # ^BackBtn
 < &Späť
 # ^NextBtn

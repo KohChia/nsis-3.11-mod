@@ -16,26 +16,6 @@ Nullsoft Install System %s
 ჩატვირთვა $(^Name)
 # ^UninstallCaption
 $(^Name)–ის წაშლა
-# ^LicenseSubCaption
-: სალიცენზიო შეთანხმება
-# ^ComponentsSubCaption
-: ჩატვირთვის მონაცემები
-# ^DirSubCaption
-: საინსტალაციო ფოლდერი
-# ^InstallingSubCaption
-: ფაილების კოპირება
-# ^CompletedSubCaption
-: ოპერაცია დასრულებულია
-# ^UnComponentsSubCaption
-: წაშლის მონაცემები
-# ^UnDirSubCaption
-: წაშლის ფოულდერი
-# ^ConfirmSubCaption
-: თანხმობა
-# ^UninstallingSubCaption
-: ფაილების წაშლა
-# ^UnCompletedSubCaption
-: ოპერაცია დასრულებულია
 # ^BackBtn
 < &უკან
 # ^NextBtn

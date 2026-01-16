@@ -16,26 +16,6 @@ Nullsoft Install System %s
 $(^Name) Sazkirin
 # ^UninstallCaption
 $(^Name) Rakirin
-# ^LicenseSubCaption
-: Peymana Lîsansê
-# ^ComponentsSubCaption
-: Vebijêrkên Sazkirinê
-# ^DirSubCaption
-: Peldanka Sazkirinê
-# ^InstallingSubCaption
-: Tê Sazkirin
-# ^CompletedSubCaption
-: Qediya
-# ^UnComponentsSubCaption
-: Vebijêrkên Rakirinê
-# ^UnDirSubCaption
-: Peldanka Rakirinê
-# ^ConfirmSubCaption
-: Erêkirin
-# ^UninstallingSubCaption
-: Tê Rakirin
-# ^UnCompletedSubCaption
-: Qediya
 # ^BackBtn
 < &Vegere
 # ^NextBtn

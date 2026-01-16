@@ -2011,29 +2011,6 @@ again:
         if (p->wndproc_id != PWP_INSTFILES && p->wndproc_id != PWP_COMPLETED)
           p->flags |= PF_CANCEL_ENABLE;
 
-        // set caption
-        struct {
-          int caption;
-          int ucaption;
-        } captions[] = {
-#ifdef NSIS_CONFIG_LICENSEPAGE
-          {NLF_SUBCAPTION_LICENSE, NLF_SUBCAPTION_LICENSE},
-#endif
-#ifdef NSIS_CONFIG_COMPONENTPAGE
-          {NLF_SUBCAPTION_OPTIONS, NLF_SUBCAPTION_OPTIONS},
-#endif
-          {NLF_SUBCAPTION_DIR, NLF_SUBCAPTION_DIR},
-          {NLF_SUBCAPTION_INSTFILES, NLF_USUBCAPTION_INSTFILES},
-#ifdef NSIS_CONFIG_UNINSTALL_SUPPORT
-          {NLF_USUBCAPTION_CONFIRM, NLF_USUBCAPTION_CONFIRM},
-#endif
-          {NLF_SUBCAPTION_COMPLETED, NLF_USUBCAPTION_COMPLETED}
-        };
-
-        if (!p->caption && p->wndproc_id != PWP_CUSTOM) {
-          p->caption = DefineInnerLangString(LS(captions[p->wndproc_id].caption, captions[p->wndproc_id].ucaption));
-        }
-
         // set texts
         switch (p->dlg_id) {
 #ifdef NSIS_CONFIG_LICENSEPAGE
